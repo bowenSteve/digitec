@@ -30,7 +30,7 @@ const WhyUs = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-[1640px] mx-auto px-5 lg:px-20 w-full">
+      <div className="max-w-screen-2xl mx-auto px-5 lg:px-20 w-full">
         <div className="xl:flex flex-row gap-12 h-auto">
           
           {/* Left Sticky Sidebar */}
@@ -96,7 +96,7 @@ const WhyUs = () => {
               {reasons.map((reason, index) => (
                 <div 
                   key={index}
-                  className={`relative p-8 group bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 ${
+                  className={`relative p-5 group transition-all duration-100 ${
                     index % 4 === 0 || index % 4 === 2 
                       ? 'xl:-mt-[50px]' 
                       : index % 4 === 1 || index % 4 === 3 
