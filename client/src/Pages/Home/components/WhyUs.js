@@ -30,7 +30,7 @@ const WhyUs = () => {
 
   return (
     <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
-      <div className="max-w-screen-2xl mx-auto px-5 lg:px-20 w-full">
+      <div className="max-w-[1640px] mx-auto px-5 lg:px-20 w-full">
         <div className="xl:flex flex-row gap-12 h-auto">
           
           {/* Left Sticky Sidebar */}

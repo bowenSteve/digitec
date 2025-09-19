@@ -6,6 +6,7 @@ import Projects from "./components/Projects"
 import About from "./components/About"
 import Services from "./components/Services"
 import WhyUs from "./components/WhyUs"
+import Reviews from "./components/Reviews"
 
 function Home (){
     return (
@@ -18,6 +19,7 @@ function Home (){
             <About/>
             <Services/>
             <WhyUs/>
+            <Reviews/>
 
             <Footer/>
 
