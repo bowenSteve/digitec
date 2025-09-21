@@ -5,6 +5,7 @@ import AboutHero from "./components/AboutHero"
 import AboutCompany from "./components/AboutCompany"
 import TeamSection from "./components/TeamSection"
 import ValuesSection from "./components/ValuesSection"
+import Team from "./components/Team"
 
 
 
@@ -18,6 +19,7 @@ function About (){
             <AboutCompany/>
             <TeamSection/>
             <ValuesSection/>
+            <Team/>
             
 
             <Footer/>
