@@ -3,11 +3,15 @@ import React, { useState, useEffect } from 'react';
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isContactPage, setIsContactPage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
+    // Check if we're on the contact page
+    setIsContactPage(window.location.pathname === '/contact');
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -24,25 +28,27 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
+        : isContactPage 
+          ? 'bg-white/95 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
     }`}>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center">
+            <a href="http://localhost:3000" className="flex items-center cursor-pointer">
               <div className={`text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled || isContactPage ? 'text-gray-900' : 'text-white'
               }`}>
                 IBN
               </div>
               <div className={`ml-2 text-xs lg:text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white/90'
+                isScrolled || isContactPage ? 'text-gray-700' : 'text-white/90'
               }`}>
                 InforBridge Niatech
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -53,7 +59,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   className={`text-sm font-medium transition-all duration-300 hover:opacity-70 ${
-                    isScrolled 
+                    isScrolled || isContactPage 
                       ? 'text-gray-900 hover:text-gray-700' 
                       : 'text-white hover:text-white/80'
                   }`}
@@ -66,9 +72,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="bg-green-400 hover:bg-green-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <a href="/contact" className="bg-green-400 hover:bg-green-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
               LET'S TALK
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -76,7 +82,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-md ${
-                isScrolled 
+                isScrolled || isContactPage 
                   ? 'text-gray-900' 
                   : 'text-white'
               }`}

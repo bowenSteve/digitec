@@ -52,13 +52,13 @@ const WhyUs = () => {
               {/* Main Heading */}
               <h2 className="text-4xl lg:text-5xl font-semibold my-4 mb-8 text-gray-900">
                 <span className="font-normal">A </span>
-                <span className="font-bold">data solutions partner in Kenya?</span>
+                <span className="font-bold">global data solutions partner?</span>
               </h2>
 
               {/* Description */}
               <div className="prose max-w-none text-gray-600 leading-relaxed mb-12">
                 <p className="mb-6">
-                  Choosing the right data partner is key to ensuring the success of your AI and analytics projects. Based in Kenya, our team delivers high-quality, scalable data solutions and intelligent automation tools essential to compete in today's data-driven market.
+                  Choosing the right data partner is key to ensuring the success of your AI and analytics projects. With offices in Kenya and Pittsburgh, US, our global team delivers high-quality, scalable data solutions and intelligent automation tools essential to compete in today's data-driven market.
                 </p>
                 
                 <p>
