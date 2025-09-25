@@ -92,10 +92,21 @@ const Footer = () => {
                 <div className="text-3xl font-bold text-white">InfoBridge</div>
                 <div className="ml-1 text-3xl font-bold text-green-400">NiaTech</div>
               </div>
-              <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
-                Transforming businesses through intelligent data solutions and cutting-edge AI technology. 
+              <p className="text-gray-400 text-sm leading-relaxed mb-4 max-w-sm">
+                Transforming businesses through intelligent data solutions and cutting-edge AI technology.
                 Empowering innovation across industries.
               </p>
+
+              {/* Location */}
+              <div className="mb-6">
+                <div className="flex items-start gap-2 text-gray-400 text-sm">
+                  <svg className="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>207 Bellwood Dr, Pittsburgh, Pennsylvania 15229, US</span>
+                </div>
+              </div>
               
               {/* Social Links */}
               <div className="flex space-x-4">
