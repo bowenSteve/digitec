@@ -1,9 +1,14 @@
+import React from 'react'
 import React, { useState, useEffect, useMemo } from 'react'
 import { ChevronDown, Search, Calendar, User, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
 
 function Projects() {
+  return (
+    <div>
+      <Navbar/>
+      <Footer/>
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('title');
@@ -387,5 +392,6 @@ function Projects() {
     </div>
   )
 }
+
 
 export default Projects

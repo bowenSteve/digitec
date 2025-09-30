@@ -40,7 +40,7 @@ const AboutCompany = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                 DATA <span className="text-red-500">SOLUTIONS</span>
                 <br />
-                <span className="text-red-500 font-outline">KENYA</span>
+                <span className="text-red-500 font-outline">GLOBAL</span>
               </h2>
               
               <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800">
@@ -52,22 +52,29 @@ const AboutCompany = () => {
             <div className="space-y-4 lg:space-y-6 text-gray-600 leading-relaxed text-sm sm:text-base">
               <p>
                 Step into the heart of innovation with InfoBridge NiaTech, the rising star among{' '}
-                <strong className="text-gray-900">data solution providers in Kenya</strong>. Founded by forward-thinking 
-                data scientists and engineers, InfoBridge is more than just a tech company. It's a hub of creativity 
+                <strong className="text-gray-900">global data solution providers</strong>. Founded by forward-thinking
+                data scientists and engineers, InfoBridge is more than just a tech company. It's a hub of creativity
                 dedicated to turning your raw data into a powerful driver of growth.
               </p>
-              
+
               <p>
-                Our roots in Kenya give us a unique perspective on the African and global markets, 
-                while our outward-looking approach allows us to anticipate and embrace the latest 
-                digital trends on an international scale.
+                With offices in Kenya and Pittsburgh, US, we bridge African innovation with global expertise,
+                giving us a unique perspective on both regional and international markets,
+                while our outward-looking approach allows us to anticipate and embrace the latest
+                digital trends on a global scale.
               </p>
             </div>
 
-            {/* Location Badge */}
-            <div className="inline-flex items-center gap-2 bg-red-50 px-3 py-2 lg:px-4 lg:py-2 rounded-full">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <span className="text-red-600 font-semibold text-sm">Nairobi, Kenya</span>
+            {/* Location Badges */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <div className="inline-flex items-center gap-2 bg-red-50 px-3 py-2 lg:px-4 lg:py-2 rounded-full">
+                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                <span className="text-red-600 font-semibold text-sm">Nairobi, Kenya</span>
+              </div>
+              <div className="inline-flex items-center gap-2 bg-blue-50 px-3 py-2 lg:px-4 lg:py-2 rounded-full">
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <span className="text-blue-600 font-semibold text-sm">Pittsburgh, PA, US</span>
+              </div>
             </div>
           </div>
 

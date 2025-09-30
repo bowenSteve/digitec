@@ -11,7 +11,7 @@ const TeamSection = () => {
           {/* Mobile Title */}
           <div className="w-full xl:hidden">
             <h2 className="font-semibold mb-5 text-2xl">
-              Welcome to InfoBridge NiaTech team of data experts Kenya
+              Welcome to InfoBridge NiaTech global team of data experts
             </h2>
           </div>
 
@@ -44,7 +44,7 @@ const TeamSection = () => {
                   className="w-full h-full object-cover object-center cursor-pointer"
                 />
               </a>
-              <span className="text-red-500">experts Kenya</span>
+              <span className="text-red-500">experts</span>
             </div>
           </div>
 
@@ -63,7 +63,7 @@ const TeamSection = () => {
             </p>
 
             <p>
-              More than just a service provider, we are <strong className="text-gray-900">your local partner in Kenya</strong>, committed to crafting a data strategy that's clear, human, and effective — <strong className="text-gray-900">built to make a difference, today and in the future</strong>.
+              More than just a service provider, we are <strong className="text-gray-900">your global partners with local expertise</strong>, committed to crafting a data strategy that's clear, human, and effective — <strong className="text-gray-900">built to make a difference, today and in the future</strong>.
             </p>
           </div>
         </div>
