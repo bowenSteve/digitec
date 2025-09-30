@@ -4,6 +4,11 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // Check if current page has white background (requires different styling)
+  const isWhiteBackgroundPage = window.location.pathname === '/contact' ||
+                               window.location.pathname === '/services' ||
+                               window.location.pathname.includes('/services');
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -14,16 +19,18 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'SOLUTIONS', href: '#solutions' },
+    { name: 'SERVICES', href: '/services' },
     { name: 'INDUSTRIES', href: '#industries' },
+    { name: 'SOLUTIONS', href: '/solutions' },
     { name: 'RESOURCES', href: '#resources' },
+    { name: 'PROJECTS', href: '/projects' },
     { name: 'ABOUT', href: '/about' }
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+      isScrolled || isWhiteBackgroundPage
+        ? 'bg-white/95 backdrop-blur-md shadow-lg'
         : 'bg-transparent'
     }`}>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,18 +38,18 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center">
+            <a href="http://localhost:3000" className="flex items-center cursor-pointer">
               <div className={`text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled || isWhiteBackgroundPage ? 'text-gray-900' : 'text-white'
               }`}>
                 IBN
               </div>
               <div className={`ml-2 text-xs lg:text-sm font-medium transition-colors duration-300 ${
-                isScrolled ? 'text-gray-700' : 'text-white/90'
+                isScrolled || isWhiteBackgroundPage ? 'text-gray-700' : 'text-white/90'
               }`}>
                 InforBridge Niatech
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -53,8 +60,8 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   className={`text-sm font-medium transition-all duration-300 hover:opacity-70 ${
-                    isScrolled 
-                      ? 'text-gray-900 hover:text-gray-700' 
+                    isScrolled || isWhiteBackgroundPage
+                      ? 'text-gray-900 hover:text-gray-700'
                       : 'text-white hover:text-white/80'
                   }`}
                 >
@@ -66,9 +73,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="bg-green-400 hover:bg-green-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+            <a href="/contact" className="bg-green-400 hover:bg-green-500 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
               LET'S TALK
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -76,8 +83,8 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-md ${
-                isScrolled 
-                  ? 'text-gray-900' 
+                isScrolled || isWhiteBackgroundPage
+                  ? 'text-gray-900'
                   : 'text-white'
               }`}
               style={{ transition: 'color 0.3s ease' }}
@@ -99,7 +106,7 @@ const Navbar = () => {
             <div 
               className="px-2 pt-2 pb-3 space-y-1 rounded-lg mt-2"
               style={{
-                backgroundColor: isScrolled ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.2)',
+                backgroundColor: (isScrolled || isWhiteBackgroundPage) ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.2)',
                 backdropFilter: 'blur(10px)',
                 transition: 'all 0.3s ease'
               }}
@@ -109,8 +116,8 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   className={`block px-3 py-2 text-sm font-medium rounded-md ${
-                    isScrolled 
-                      ? 'text-gray-900' 
+                    isScrolled || isWhiteBackgroundPage
+                      ? 'text-gray-900'
                       : 'text-white'
                   }`}
                   style={{ 
@@ -118,26 +125,27 @@ const Navbar = () => {
                     cursor: 'pointer'
                   }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  onMouseEnter={(e) => e.target.style.backgroundColor = isScrolled ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)'}
+                  onMouseEnter={(e) => e.target.style.backgroundColor = (isScrolled || isWhiteBackgroundPage) ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.1)'}
                   onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
                 >
                   {item.name}
                 </a>
               ))}
               <div className="pt-2">
-                <button 
-                  className="w-full text-white text-sm font-semibold px-4 py-2 rounded-full"
+                <a 
+                  href="/contact"
+                  className="w-full text-white text-sm font-semibold px-4 py-2 rounded-full inline-block text-center"
                   style={{
                     backgroundColor: '#4ade80',
                     transition: 'all 0.3s ease',
-                    border: 'none',
-                    cursor: 'pointer'
+                    textDecoration: 'none'
                   }}
                   onMouseEnter={(e) => e.target.style.backgroundColor = '#22c55e'}
                   onMouseLeave={(e) => e.target.style.backgroundColor = '#4ade80'}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   LET'S TALK
-                </button>
+                </a>
               </div>
             </div>
           </div>
