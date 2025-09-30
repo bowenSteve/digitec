@@ -21,7 +21,9 @@ const Navbar = () => {
   const navItems = [
     { name: 'SERVICES', href: '/services' },
     { name: 'INDUSTRIES', href: '#industries' },
+    { name: 'SOLUTIONS', href: '/solutions' },
     { name: 'RESOURCES', href: '#resources' },
+    { name: 'PROJECTS', href: '/projects' },
     { name: 'ABOUT', href: '/about' }
   ];
 
@@ -36,7 +38,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="http://localhost:3000" className="flex items-center cursor-pointer">
+            <a href="/" className="flex items-center cursor-pointer">
               <div className={`text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
                 isScrolled || isWhiteBackgroundPage ? 'text-gray-900' : 'text-white'
               }`}>

@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
   const scrollContainerRef = useRef(null);
   const sectionRef = useRef(null);
   const projectsAreaRef = useRef(null);
@@ -193,7 +195,13 @@ const Projects = () => {
               </p>
             </div>
             
-            <button className="flex-shrink-0 border-2 border-red-500 text-red-500 px-6 py-3 rounded-full font-medium hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center gap-2">
+            <button
+              onClick={() => {
+                navigate('/projects');
+                window.scrollTo(0, 0);
+              }}
+              className="flex-shrink-0 border-2 border-red-500 text-red-500 px-6 py-3 rounded-full font-medium hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+            >
               View All
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
