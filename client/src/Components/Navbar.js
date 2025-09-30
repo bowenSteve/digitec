@@ -38,7 +38,7 @@ const Navbar = () => {
           
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="http://localhost:3000" className="flex items-center cursor-pointer">
+            <a href="/" className="flex items-center cursor-pointer">
               <div className={`text-2xl lg:text-3xl font-bold transition-colors duration-300 ${
                 isScrolled || isWhiteBackgroundPage ? 'text-gray-900' : 'text-white'
               }`}>
