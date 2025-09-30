@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -101,7 +103,13 @@ const Services = () => {
             </div>
             {/* Mobile CTA */}
             <div className="flex justify-center mb-12">
-              <button className="group w-32 h-32 border-2 border-red-500 rounded-full flex flex-col items-center justify-center text-center hover:bg-red-500 hover:text-white transition-all duration-300 bg-white">
+              <button
+                onClick={() => {
+                  navigate('/services');
+                  window.scrollTo(0, 0);
+                }}
+                className="group w-32 h-32 border-2 border-red-500 rounded-full flex flex-col items-center justify-center text-center hover:bg-red-500 hover:text-white transition-all duration-300 bg-white"
+              >
                 <span className="text-xs font-semibold mb-1">See our</span>
                 <span className="text-xs font-semibold mb-2">services</span>
                 <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -213,7 +221,13 @@ const Services = () => {
 
               {/* CTA Button */}
               <div className="relative">
-                <button className="group w-40 h-40 border-2 border-red-500 rounded-full flex flex-col items-center justify-center text-center hover:bg-red-500 hover:text-white transition-all duration-300 bg-white">
+                <button
+                  onClick={() => {
+                    navigate('/services');
+                    window.scrollTo(0, 0);
+                  }}
+                  className="group w-40 h-40 border-2 border-red-500 rounded-full flex flex-col items-center justify-center text-center hover:bg-red-500 hover:text-white transition-all duration-300 bg-white"
+                >
                   <span className="text-sm font-semibold mb-1">See our</span>
                   <span className="text-sm font-semibold mb-2">services</span>
                   <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

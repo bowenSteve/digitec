@@ -21,7 +21,7 @@ const AboutHero = () => {
         </h1>
         
         <p className="text-lg lg:text-xl text-gray-200 leading-relaxed max-w-2xl mx-auto">
-          Empowering businesses across Africa with cutting-edge data solutions, 
+          Empowering businesses across Africa and North America with cutting-edge data solutions,
           AI model training, and intelligent automation services.
         </p>
       </div>
