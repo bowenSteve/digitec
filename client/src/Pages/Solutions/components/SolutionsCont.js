@@ -8,7 +8,7 @@ const SolutionsCont = () => {
   const solutions = [
     {
       title: "Computer Vision",
-      image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://www.peopleforai.com/wp-content/uploads/2025/03/tiny-featured-image.png",
       description: "Advanced image recognition and analysis for autonomous systems, quality control, and intelligent surveillance applications.",
       tags: ["object detection", "image segmentation", "facial recognition"],
       category: "CV"
@@ -33,6 +33,20 @@ const SolutionsCont = () => {
       description: "Comprehensive data collection, annotation, processing, and management services to power your AI and business intelligence initiatives.",
       tags: ["data collection", "annotation", "processing"],
       category: "DATA"
+    },
+    {
+      title: "Automation Solutions",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      description: "Streamline your operations with intelligent workflow automation, RPA, and process optimization solutions that reduce manual work and boost efficiency.",
+      tags: ["workflow automation", "RPA", "process optimization"],
+      category: "AUTOMATION"
+    },
+    {
+      title: "Development Solutions",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      description: "Custom web applications, enterprise systems, and software development services tailored to your unique business requirements and technical needs.",
+      tags: ["web development", "system integration", "custom software"],
+      category: "DEVELOPMENT"
     }
   ];
 
@@ -74,24 +88,24 @@ const SolutionsCont = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <span className="text-red-500 text-sm font-semibold uppercase tracking-wider">
-              WHAT WE DO
+            <span className="text-green-400 text-sm font-semibold uppercase tracking-wider">
+              OUR SOLUTIONS
             </span>
             <div className="flex gap-1">
-              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
               <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
               <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
             </div>
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 uppercase">
-            Take a Look
+            Data & AI Solutions
           </h2>
           <div className="max-w-3xl mx-auto space-y-4 text-gray-600">
             <p>
-              <strong className="text-gray-900">Welcome to our portfolio — a space dedicated to our successful collaborations with ambitious enterprises.</strong> We firmly believe that AI is a powerful growth driver, accessible to businesses of all sizes.
+              <strong className="text-gray-900">Empowering businesses with cutting-edge technology and data-driven solutions.</strong> From AI model training to custom software development, we deliver comprehensive services that transform how you work with data and technology.
             </p>
             <p>
-              Our mission is to guide you through your digital transformation by offering <strong className="text-gray-900">tailor-made solutions</strong> that address your specific needs. Discover how we've helped our clients stand out and thrive in an increasingly connected world.
+              Our expertise spans <strong className="text-gray-900">artificial intelligence, automation, and enterprise development</strong>, helping organizations across Africa and North America unlock the full potential of their data. Explore our solution offerings below.
             </p>
           </div>
         </div>
