@@ -28,6 +28,7 @@ const routes = [
         element: < Services/>
     },
     {
+
         path: '/solutions',
         element: < Solutions/>
     }
