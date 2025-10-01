@@ -28,6 +28,7 @@ const routes = [
         element: <Services />
     },
     {
+
         path: '/solutions',
         element: <Solutions />
     },
@@ -38,3 +39,4 @@ const routes = [
 ]
 
 export default routes;
+

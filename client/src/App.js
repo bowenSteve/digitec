@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './Images/ibn.png';
 import './App.css';
 
 
