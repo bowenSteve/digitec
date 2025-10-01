@@ -4,34 +4,37 @@ import Contact from "../Pages/Contact/Contact"
 import Projects from "../Pages/Projects/Projects"
 import Services from "../Pages/Services/Services"
 import Solutions from "../Pages/Solutions/Solutions"
-
+import SolutionDetail from "../Pages/Solutions/Sub-Solutions/SolutionDetail"
 
 const routes = [
     {
         path: '/',
-        element: < Home />
+        element: <Home />
     },
     {
         path: '/about',
-        element: < About />
+        element: <About />
     },
     {
         path: '/contact',
-        element: < Contact />
+        element: <Contact />
     },
     {
         path: '/projects',
-        element: < Projects/>
+        element: <Projects />
     },
     {
         path: '/services',
-        element: < Services/>
+        element: <Services />
     },
     {
         path: '/solutions',
-        element: < Solutions/>
+        element: <Solutions />
+    },
+    {
+        path: '/solutions/:slug',
+        element: <SolutionDetail />
     }
 ]
-
 
 export default routes;

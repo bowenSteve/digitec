@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const SolutionsCont = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
+  // Helper function to convert title to URL slug
+  const slugify = (text) => {
+    return text
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w-]+/g, '');
+  };
+
   const solutions = [
     {
       title: "Computer Vision",
+      slug: "computer-vision",
       image: "https://www.peopleforai.com/wp-content/uploads/2025/03/tiny-featured-image.png",
       description: "Advanced image recognition and analysis for autonomous systems, quality control, and intelligent surveillance applications.",
       tags: ["object detection", "image segmentation", "facial recognition"],
@@ -15,6 +25,7 @@ const SolutionsCont = () => {
     },
     {
       title: "Natural Language Processing",
+      slug: "natural-language-processing",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description: "Sophisticated text analysis, sentiment detection, and language understanding for chatbots, content moderation, and automated translation.",
       tags: ["sentiment analysis", "entity extraction", "text classification"],
@@ -22,6 +33,7 @@ const SolutionsCont = () => {
     },
     {
       title: "Generative AI",
+      slug: "generative-ai",
       image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description: "Create synthetic data, generate content, and build intelligent systems that learn and adapt to your specific business needs.",
       tags: ["content generation", "data synthesis", "model training"],
@@ -29,6 +41,7 @@ const SolutionsCont = () => {
     },
     {
       title: "Data & Content Services",
+      slug: "data-content-services",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description: "Comprehensive data collection, annotation, processing, and management services to power your AI and business intelligence initiatives.",
       tags: ["data collection", "annotation", "processing"],
@@ -36,6 +49,7 @@ const SolutionsCont = () => {
     },
     {
       title: "Automation Solutions",
+      slug: "automation-solutions",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description: "Streamline your operations with intelligent workflow automation, RPA, and process optimization solutions that reduce manual work and boost efficiency.",
       tags: ["workflow automation", "RPA", "process optimization"],
@@ -43,6 +57,7 @@ const SolutionsCont = () => {
     },
     {
       title: "Development Solutions",
+      slug: "development-solutions",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       description: "Custom web applications, enterprise systems, and software development services tailored to your unique business requirements and technical needs.",
       tags: ["web development", "system integration", "custom software"],
@@ -113,9 +128,10 @@ const SolutionsCont = () => {
         {/* Solutions Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {solutions.map((solution, index) => (
-            <div
+            <Link
               key={index}
-              className="group relative cursor-none overflow-hidden"
+              to={`/solutions/${solution.slug}`}
+              className="group relative cursor-none overflow-hidden block"
               style={{
                 marginTop: index % 2 === 1 ? '160px' : '0',
                 marginBottom: index % 2 === 0 ? '160px' : '0'
@@ -178,7 +194,7 @@ const SolutionsCont = () => {
                   {solution.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
