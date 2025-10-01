@@ -268,7 +268,7 @@ function Services() {
         <section className="hero-section">
           <div className="hero-content">
             <div className="hero-left">
-              <div className="hidden xl:block w-1/3 h-96 absolute -mx-20 bg-gradient left-10 dark:hidden"></div>
+              <div className="hidden xl:block w-1/3 h-96 absolute -mx-20 bg-gradient-to-r from-red-500 to-red-400 left-10 dark:hidden"></div>
               <div className="hero-decorative"></div>
               <img
                 width="768"

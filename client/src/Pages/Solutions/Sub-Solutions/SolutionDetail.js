@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import Navbar from '../../../Components/Navbar';
 import Footer from '../../../Components/Footer';
@@ -8,6 +8,11 @@ import { getSolutionBySlug } from '../../../data/solutionsData';
 const SolutionDetail = () => {
   // Get the solution slug from URL (e.g., /solutions/computer-vision)
   const { slug } = useParams();
+
+  // Scroll to top when component mounts or slug changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   
   // Get solution data from our central data file
   const solutionData = getSolutionBySlug(slug);

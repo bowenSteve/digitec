@@ -14,7 +14,7 @@ const SolutionHero = ({
       <div className="w-full h-full flex flex-col-reverse xl:flex-row gap-12 xl:gap-0 -mt-[35px]">
         
         {/* Gradient Overlay (Desktop Only) */}
-        <div className="hidden xl:block w-1/3 h-full absolute -mx-20 bg-gradient-to-r from-green-400/10 to-transparent left-10"></div>
+        <div className="hidden xl:block w-1/3 h-full absolute -mx-20 bg-gradient-to-r from-red-500 to-red-400 left-10"></div>
         
         {/* Left Side - Image */}
         <div className="hidden xl:block xl:w-1/2 h-[40vh] xl:h-auto relative">
@@ -22,8 +22,8 @@ const SolutionHero = ({
             <img
               src={image}
               alt={title}
-              className="absolute w-[90%] h-[110%] z-50 object-cover xl:-mt-32 imgProjectCover rounded-lg shadow-2xl"
-              style={{ marginTop: "2px" }}
+              className="absolute w-[90%] h-[110%] z-40 object-cover xl:-mt-32 imgProjectCover rounded-lg shadow-2xl"
+              style={{ marginTop: "0px" }}
               loading="eager"
             />
           </figure>

@@ -78,8 +78,8 @@ const SolutionsCont = () => {
     <section className="py-20 bg-white relative overflow-hidden">
       {/* Custom Cursor */}
       {isHovering && (
-        <div 
-          className="fixed w-24 h-24 pointer-events-none z-50 transition-all duration-200"
+        <div
+          className="fixed w-24 h-24 pointer-events-none z-50"
           style={{
             left: `${cursorPosition.x}px`,
             top: `${cursorPosition.y}px`,
