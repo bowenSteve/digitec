@@ -3,6 +3,7 @@ import { useParams, Navigate } from 'react-router-dom';
 import Navbar from '../../../Components/Navbar';
 import Footer from '../../../Components/Footer';
 import SolutionHero from './components/SolutionHero';
+import OtherSolutions from './components/OtherSolutions';
 import { getSolutionBySlug } from '../../../data/solutionsData';
 
 const SolutionDetail = () => {
@@ -22,8 +23,8 @@ const SolutionDetail = () => {
     return <Navigate to="/solutions" replace />;
   }
 
-  // Destructure hero data
-  const { hero } = solutionData;
+  // Destructure hero and otherSolutions data
+  const { hero, otherSolutions } = solutionData;
 
   return (
     <div className="bg-white">
@@ -50,11 +51,15 @@ const SolutionDetail = () => {
             <li>• Use Cases & Applications</li>
             <li>• Our Process & Methodology</li>
             <li>• Technologies & Tools</li>
-            <li>• Related Solutions</li>
-            <li>• Get Started CTA</li>
           </ul>
         </div>
       </div>
+
+      {/* Other Solutions Section */}
+      <OtherSolutions 
+        currentSolutionSlug={slug}
+        otherSolutions={otherSolutions}
+      />
 
       <Footer />
     </div>
