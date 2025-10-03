@@ -5,6 +5,7 @@ import Footer from '../../../Components/Footer';
 import SolutionHero from './components/SolutionHero';
 import SolutionFeatures from './components/SolutionFeatures';
 import SolutionProcess from './components/SolutionProcess';
+import SolutionUseCases from './components/SolutionUseCases';
 import OtherSolutions from './components/OtherSolutions';
 import { getSolutionBySlug } from '../../../data/solutionsData';
 
@@ -26,7 +27,7 @@ const SolutionDetail = () => {
   }
 
   // Destructure all data sections
-  const { hero, features, industries, process, otherSolutions } = solutionData;
+  const { hero, features, industries, process, useCases, otherSolutions } = solutionData;
 
   return (
     <div className="bg-white">
@@ -52,19 +53,21 @@ const SolutionDetail = () => {
       {/* Process Section */}
       <SolutionProcess process={process} />
 
-      {/* Placeholder for future sections */}
+      {/* Use Cases Section */}
+      <SolutionUseCases useCases={useCases} />
+
+      {/* Placeholder for future sections
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center text-gray-400">
           <p className="text-sm uppercase tracking-wider mb-4">Coming Soon</p>
           <p>Additional sections will be added here:</p>
           <ul className="mt-4 space-y-2 text-sm">
-            <li>• Use Cases & Applications</li>
             <li>• Technologies & Tools</li>
             <li>• Client Testimonials</li>
             <li>• Get Started CTA</li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
       {/* Other Solutions Section */}
       <OtherSolutions 

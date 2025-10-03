@@ -28,7 +28,7 @@ const SolutionFeatures = ({ features, industries }) => {
   return (
     <section className="w-full mx-auto mb-20 lg:mb-40 pt-16 pb-16 px-5 sm:px-8 xl:px-20 2xl:px-20 max-w-screen-2xl relative">
       <div className="w-full flex flex-wrap gap-6 xl:gap-0">
-        
+
         {/* Left Side - Sticky Sidebar (33%) */}
         <div className="w-full xl:w-1/3 xl:pr-16">
           <div className="xl:sticky xl:top-8">

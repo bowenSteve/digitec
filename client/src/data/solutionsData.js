@@ -19,6 +19,48 @@ export const solutionsData = {
       { name: "Security", icon: "Shield" },
       { name: "Agriculture", icon: "Sprout" }
     ],
+    useCases: [
+      {
+        featured: true,
+        category: "HEALTHCARE",
+        title: "AI-Powered Patient Record Analysis",
+        description: "Major hospital network uses computer vision to digitize and analyze 500,000+ patient records, reducing processing time by 80% and improving diagnostic accuracy.",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["80% faster processing", "99.5% accuracy", "500K+ records processed"]
+      },
+      {
+        featured: false,
+        category: "MANUFACTURING",
+        title: "Automated Quality Control",
+        description: "Automotive manufacturer implements real-time defect detection system, identifying product flaws with 99.9% accuracy on production lines.",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["99.9% accuracy", "40% cost reduction", "Zero defects shipped"]
+      },
+      {
+        featured: false,
+        category: "RETAIL",
+        title: "Smart Inventory Management",
+        description: "Global retailer deploys computer vision to track shelf inventory in real-time across 1,200+ stores, preventing stockouts and optimizing supply chain operations.",
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["35% reduction in stockouts", "1,200+ stores automated", "Real-time inventory tracking"]
+      },
+      {
+        featured: false,
+        category: "SECURITY",
+        title: "Advanced Surveillance System",
+        description: "International airport implements facial recognition and object detection to enhance security screening, processing 100,000+ passengers daily while reducing wait times.",
+        image: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["100K+ passengers daily", "60% faster screening", "Enhanced threat detection"]
+      },
+      {
+        featured: false,
+        category: "AGRICULTURE",
+        title: "Precision Crop Monitoring",
+        description: "Agricultural cooperative uses drone-based computer vision to monitor crop health across 50,000 acres, detecting diseases early and optimizing yield by 25%.",
+        image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["25% yield increase", "50K acres monitored", "Early disease detection"]
+      }
+    ],
     features: [
       {
         icon: "Eye",
@@ -124,6 +166,48 @@ export const solutionsData = {
       { name: "Customer Support", icon: "Headphones" },
       { name: "Legal", icon: "Scale" },
       { name: "Healthcare", icon: "Heart" }
+    ],
+    useCases: [
+      {
+        featured: true,
+        category: "FINANCIAL SERVICES",
+        title: "Intelligent Fraud Detection & Analysis",
+        description: "Leading bank deploys NLP to analyze transaction narratives and customer communications, detecting fraudulent patterns across 10 million+ daily transactions with 96% accuracy.",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["96% fraud detection accuracy", "10M+ transactions daily", "75% reduction in false positives"]
+      },
+      {
+        featured: false,
+        category: "E-COMMERCE",
+        title: "AI-Powered Customer Review Analysis",
+        description: "E-commerce platform uses sentiment analysis to process 500,000+ product reviews monthly, automatically categorizing feedback and improving product recommendations by 40%.",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["500K+ reviews analyzed monthly", "40% better recommendations", "Real-time sentiment tracking"]
+      },
+      {
+        featured: false,
+        category: "CUSTOMER SUPPORT",
+        title: "Multilingual Chatbot Platform",
+        description: "Global telecommunications company implements NLP chatbot supporting 27 languages, handling 2 million+ customer queries monthly and reducing support costs by 60%.",
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["27 languages supported", "2M+ queries monthly", "60% cost reduction"]
+      },
+      {
+        featured: false,
+        category: "LEGAL",
+        title: "Automated Contract Intelligence",
+        description: "Law firm uses NLP to extract key clauses and analyze risk from legal documents, reviewing 10,000+ contracts annually and reducing review time by 70%.",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["70% faster contract review", "10K+ contracts processed", "Enhanced risk identification"]
+      },
+      {
+        featured: false,
+        category: "HEALTHCARE",
+        title: "Clinical Notes Processing System",
+        description: "Healthcare provider implements NLP to extract medical entities from 200,000+ clinical notes monthly, improving diagnostic coding accuracy and reducing billing errors by 85%.",
+        image: "https://images.unsplash.com/photo-1584982751601-97dcc096659c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["85% fewer billing errors", "200K+ notes processed", "Improved coding accuracy"]
+      }
     ],
     features: [
       {
@@ -236,6 +320,48 @@ export const solutionsData = {
       { name: "Gaming", icon: "Gamepad2" },
       { name: "Education", icon: "GraduationCap" }
     ],
+    useCases: [
+      {
+        featured: true,
+        category: "MARKETING & ADVERTISING",
+        title: "AI-Generated Marketing Campaign Content",
+        description: "Digital marketing agency uses generative AI to create personalized ad copy and visuals for 200+ clients, reducing content production time by 85% while maintaining brand consistency.",
+        image: "https://images.unsplash.com/photo-1557838923-2985c318be48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["85% faster content creation", "200+ clients served", "3x more variations tested"]
+      },
+      {
+        featured: false,
+        category: "HEALTHCARE",
+        title: "Synthetic Medical Data Generation",
+        description: "Research hospital generates realistic synthetic patient data for ML model training, enabling privacy-compliant development of diagnostic AI systems without exposing real patient information.",
+        image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["100% HIPAA compliant", "5M+ synthetic records", "Accelerated AI development"]
+      },
+      {
+        featured: false,
+        category: "GAMING",
+        title: "Procedural Game Asset Creation",
+        description: "Game studio leverages generative AI to create unique character designs, textures, and environments, producing 10,000+ game assets and reducing art production costs by 60%.",
+        image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["10K+ unique assets", "60% cost reduction", "Faster iteration cycles"]
+      },
+      {
+        featured: false,
+        category: "EDUCATION",
+        title: "Personalized Learning Content Generator",
+        description: "Online education platform uses AI to generate customized lesson plans, quizzes, and study materials for 50,000+ students, adapting content to individual learning styles and pace.",
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["50K+ students served", "40% better engagement", "Personalized learning paths"]
+      },
+      {
+        featured: false,
+        category: "TECHNOLOGY",
+        title: "Automated Code Documentation & Testing",
+        description: "Software company implements AI to automatically generate code documentation, unit tests, and API examples, improving developer productivity by 45% and code coverage by 30%.",
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["45% productivity boost", "30% more code coverage", "Automated documentation"]
+      }
+    ],
     features: [
       {
         icon: "Sparkles",
@@ -341,6 +467,48 @@ export const solutionsData = {
       { name: "Technology", icon: "Cpu" },
       { name: "Government", icon: "Building" },
       { name: "Insurance", icon: "FileText" }
+    ],
+    useCases: [
+      {
+        featured: true,
+        category: "HEALTHCARE",
+        title: "Medical Image Annotation Pipeline",
+        description: "Healthcare AI startup leverages expert radiologists to annotate 250,000+ medical images for training diagnostic AI models, achieving 98% inter-annotator agreement and FDA approval pathway.",
+        image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["250K+ images annotated", "98% agreement rate", "FDA approval pathway"]
+      },
+      {
+        featured: false,
+        category: "FINANCE & BANKING",
+        title: "Financial Document Digitization",
+        description: "Investment firm digitizes and structures 15 years of paper records into searchable database, processing 3 million+ documents with 99.8% accuracy for regulatory compliance.",
+        image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["3M+ documents processed", "99.8% accuracy", "Full compliance achieved"]
+      },
+      {
+        featured: false,
+        category: "RESEARCH & ACADEMIA",
+        title: "Scientific Literature Data Extraction",
+        description: "Research institute extracts structured data from 50,000+ scientific papers, building comprehensive database for meta-analysis and accelerating research discovery by 6 months.",
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["50K+ papers processed", "6 months saved", "Comprehensive meta-analysis"]
+      },
+      {
+        featured: false,
+        category: "TECHNOLOGY",
+        title: "AI Training Dataset Curation",
+        description: "Tech company curates and labels 5 million+ diverse data points for computer vision model, covering 100+ categories and achieving state-of-the-art model performance.",
+        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["5M+ data points", "100+ categories", "SOTA model performance"]
+      },
+      {
+        featured: false,
+        category: "INSURANCE",
+        title: "Claims Document Processing",
+        description: "Insurance provider automates claims document data extraction, processing 100,000+ claims monthly with 95% straight-through processing rate and 70% faster settlement times.",
+        image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["100K+ claims monthly", "95% auto-processing", "70% faster settlements"]
+      }
     ],
     features: [
       {
@@ -453,6 +621,48 @@ export const solutionsData = {
       { name: "Telecommunications", icon: "Radio" },
       { name: "Retail", icon: "ShoppingBag" }
     ],
+    useCases: [
+      {
+        featured: true,
+        category: "MANUFACTURING",
+        title: "End-to-End Production Automation",
+        description: "Electronics manufacturer deploys RPA across 15 factories to automate inventory management, quality reporting, and order processing, reducing operational costs by 45% and processing 50,000+ orders weekly.",
+        image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["45% cost reduction", "50K+ orders weekly", "15 factories automated"]
+      },
+      {
+        featured: false,
+        category: "FINANCE & BANKING",
+        title: "Automated Loan Processing System",
+        description: "Regional bank implements workflow automation for loan applications, reducing processing time from 5 days to 2 hours and handling 10,000+ applications monthly with 99% accuracy.",
+        image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["From 5 days to 2 hours", "10K+ applications monthly", "99% accuracy"]
+      },
+      {
+        featured: false,
+        category: "HEALTHCARE",
+        title: "Patient Appointment & Billing Automation",
+        description: "Healthcare network automates appointment scheduling, insurance verification, and billing processes across 30 clinics, serving 100,000+ patients annually and reducing administrative overhead by 60%.",
+        image: "https://images.unsplash.com/photo-1519494140681-8b17d830a3ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["60% admin cost reduction", "100K+ patients served", "30 clinics connected"]
+      },
+      {
+        featured: false,
+        category: "LOGISTICS & SUPPLY CHAIN",
+        title: "Smart Warehouse Operations",
+        description: "Logistics company automates warehouse picking, packing, and shipping workflows with IoT integration, processing 200,000+ shipments monthly with 98% on-time delivery rate.",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["200K+ shipments monthly", "98% on-time delivery", "50% faster processing"]
+      },
+      {
+        featured: false,
+        category: "RETAIL",
+        title: "Omnichannel Order Fulfillment",
+        description: "Retail chain automates order routing between online and physical stores, synchronizing inventory in real-time across 500+ locations and improving fulfillment speed by 65%.",
+        image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["500+ stores connected", "65% faster fulfillment", "Real-time inventory sync"]
+      }
+    ],
     features: [
       {
         icon: "Cpu",
@@ -558,6 +768,48 @@ export const solutionsData = {
       { name: "Healthcare & Medtech", icon: "Heart" },
       { name: "Education & E-learning", icon: "GraduationCap" },
       { name: "Real Estate & PropTech", icon: "Home" }
+    ],
+    useCases: [
+      {
+        featured: true,
+        category: "TECHNOLOGY STARTUPS",
+        title: "MVP Development for AI-Powered SaaS Platform",
+        description: "Early-stage startup launches full-featured SaaS platform in 3 months with React, Node.js, and AWS infrastructure, securing $2M seed funding and onboarding 500+ beta users.",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["3-month launch timeline", "$2M funding secured", "500+ beta users"]
+      },
+      {
+        featured: false,
+        category: "E-COMMERCE",
+        title: "Headless Commerce Platform Rebuild",
+        description: "Fashion retailer migrates to modern headless architecture with Next.js and Shopify, achieving 3x faster page loads, 45% conversion increase, and $10M additional annual revenue.",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["3x faster page loads", "45% conversion boost", "$10M revenue increase"]
+      },
+      {
+        featured: false,
+        category: "FINANCE & FINTECH",
+        title: "Mobile Banking Application",
+        description: "Digital bank develops feature-rich mobile app for iOS and Android supporting 100,000+ users, with biometric authentication, real-time transactions, and PCI-DSS compliance.",
+        image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["100K+ active users", "Bank-grade security", "4.8-star rating"]
+      },
+      {
+        featured: false,
+        category: "HEALTHCARE & MEDTECH",
+        title: "Telemedicine Platform with HIPAA Compliance",
+        description: "Healthcare provider builds secure telemedicine platform connecting 200+ doctors with 50,000+ patients, featuring video consultations, e-prescriptions, and EHR integration.",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["200+ doctors onboarded", "50K+ patients served", "HIPAA compliant"]
+      },
+      {
+        featured: false,
+        category: "EDUCATION & E-LEARNING",
+        title: "Interactive Learning Management System",
+        description: "EdTech company develops comprehensive LMS with live classes, AI-powered assessments, and progress tracking, serving 25,000+ students across 100+ educational institutions.",
+        image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["25K+ students", "100+ institutions", "95% satisfaction rate"]
+      }
     ],
     features: [
       {
