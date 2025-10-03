@@ -25,7 +25,7 @@ export const solutionsData = {
         category: "HEALTHCARE",
         title: "AI-Powered Patient Record Analysis",
         description: "Major hospital network uses computer vision to digitize and analyze 500,000+ patient records, reducing processing time by 80% and improving diagnostic accuracy.",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         results: ["80% faster processing", "99.5% accuracy", "500K+ records processed"]
       },
       {
