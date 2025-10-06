@@ -1799,6 +1799,806 @@ export const servicesData = {
         category: "WEB SERVICES"
       }
     ]
+  },
+
+  'data-collection-research': {
+    hero: {
+      category: "DATA RESEARCH",
+      title: "Data Collection",
+      subtitle: "& Research",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Python, Web Scraping, APIs, Survey Tools, Data Mining",
+      keyFeatures: "Market research, Data extraction, Survey design",
+      description: "Gather accurate, relevant data to power your business decisions. Our comprehensive data collection and research services combine advanced techniques with rigorous quality control to deliver insights that drive strategic growth and competitive advantage."
+    },
+    industries: [
+      { name: "Market Research", icon: "TrendingUp" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "Finance", icon: "DollarSign" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Technology", icon: "Cpu" },
+      { name: "Academic Research", icon: "GraduationCap" }
+    ],
+    features: [
+      {
+        icon: "Database",
+        title: "Web Data Extraction",
+        description: "Automated collection of structured data from websites, databases, and online sources with accuracy and compliance."
+      },
+      {
+        icon: "ClipboardList",
+        title: "Survey & Questionnaires",
+        description: "Design and deploy targeted surveys to gather primary data from your specific audience segments."
+      },
+      {
+        icon: "Search",
+        title: "Market Research",
+        description: "Comprehensive competitive analysis, market trends, and industry insights to inform strategic decisions."
+      },
+      {
+        icon: "FileSearch",
+        title: "Data Mining",
+        description: "Extract valuable patterns and insights from large datasets using advanced analytics and mining techniques."
+      },
+      {
+        icon: "CheckCircle",
+        title: "Quality Assurance",
+        description: "Rigorous validation and verification processes to ensure data accuracy, completeness, and reliability."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A systematic approach to data collection that ensures accuracy, relevance, and actionable insights.",
+      steps: [
+        {
+          number: "01",
+          icon: "Target",
+          title: "Requirements Definition",
+          description: "Identify data needs, sources, collection methods, and quality standards aligned with your objectives."
+        },
+        {
+          number: "02",
+          icon: "Settings",
+          title: "Methodology Design",
+          description: "Develop data collection frameworks, tools, and protocols to ensure consistent, reliable results."
+        },
+        {
+          number: "03",
+          icon: "Download",
+          title: "Data Collection",
+          description: "Execute collection activities using automated tools, surveys, or manual research based on requirements."
+        },
+        {
+          number: "04",
+          icon: "CheckSquare",
+          title: "Validation & Cleaning",
+          description: "Verify data accuracy, remove duplicates, handle missing values, and ensure quality standards."
+        },
+        {
+          number: "05",
+          icon: "Package",
+          title: "Delivery & Documentation",
+          description: "Deliver structured, clean datasets with comprehensive documentation and collection methodology."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "AI Model Training & Annotation",
+        slug: "ai-model-training-annotation",
+        category: "AI TRAINING"
+      },
+      {
+        title: "Business Intelligence Dashboards",
+        slug: "business-intelligence-dashboards",
+        category: "INTELLIGENCE"
+      },
+      {
+        title: "Strategic Data Insights",
+        slug: "strategic-data-insights",
+        category: "INSIGHTS"
+      }
+    ]
+  },
+
+  'ai-model-training-annotation': {
+    hero: {
+      category: "AI TRAINING",
+      title: "AI Model Training",
+      subtitle: "& Annotation",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "TensorFlow, PyTorch, Labelbox, Computer Vision, NLP",
+      keyFeatures: "Data labeling, Model training, Quality control",
+      description: "Prepare high-quality training data for machine learning and AI models. Our expert annotation services provide accurate labeling, tagging, and categorization across text, images, video, and audio to power your AI initiatives and improve model performance."
+    },
+    industries: [
+      { name: "Artificial Intelligence", icon: "Brain" },
+      { name: "Autonomous Vehicles", icon: "Car" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "E-commerce", icon: "ShoppingBag" },
+      { name: "Security", icon: "Shield" },
+      { name: "Robotics", icon: "Bot" }
+    ],
+    features: [
+      {
+        icon: "Tag",
+        title: "Image Annotation",
+        description: "Precise labeling of images with bounding boxes, polygons, semantic segmentation, and keypoint annotation."
+      },
+      {
+        icon: "FileText",
+        title: "Text Annotation",
+        description: "Entity recognition, sentiment analysis, intent classification, and linguistic annotation for NLP models."
+      },
+      {
+        icon: "Video",
+        title: "Video Annotation",
+        description: "Frame-by-frame object tracking, action recognition, and temporal annotation for video AI applications."
+      },
+      {
+        icon: "Headphones",
+        title: "Audio Transcription",
+        description: "Accurate speech-to-text conversion, speaker identification, and audio event detection and classification."
+      },
+      {
+        icon: "CheckCircle2",
+        title: "Quality Validation",
+        description: "Multi-layer quality checks, inter-annotator agreement scoring, and continuous improvement processes."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A rigorous annotation workflow that delivers high-quality training data for superior AI model performance.",
+      steps: [
+        {
+          number: "01",
+          icon: "FileSearch",
+          title: "Project Scoping",
+          description: "Understand AI model requirements, annotation guidelines, quality standards, and project timeline."
+        },
+        {
+          number: "02",
+          icon: "BookOpen",
+          title: "Guideline Development",
+          description: "Create detailed annotation guidelines, examples, and edge case documentation for consistency."
+        },
+        {
+          number: "03",
+          icon: "Users",
+          title: "Team Training",
+          description: "Train specialized annotation teams on your specific requirements with quality benchmarks and tests."
+        },
+        {
+          number: "04",
+          icon: "Tags",
+          title: "Annotation Execution",
+          description: "Execute annotation tasks with multiple quality checkpoints and consensus-based validation."
+        },
+        {
+          number: "05",
+          icon: "Award",
+          title: "Quality Assurance",
+          description: "Conduct comprehensive quality reviews, accuracy measurements, and deliver validated training datasets."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Data Collection & Research",
+        slug: "data-collection-research",
+        category: "DATA RESEARCH"
+      },
+      {
+        title: "Quality Assurance & Validation",
+        slug: "quality-assurance-validation",
+        category: "QUALITY"
+      },
+      {
+        title: "Document Digitization",
+        slug: "document-digitization",
+        category: "DIGITIZATION"
+      }
+    ]
+  },
+
+  'business-intelligence-dashboards': {
+    hero: {
+      category: "INTELLIGENCE",
+      title: "Business Intelligence",
+      subtitle: "Dashboards",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Power BI, Tableau, Looker, QlikView, Data Analytics",
+      keyFeatures: "Interactive dashboards, Real-time analytics, Custom KPIs",
+      description: "Transform raw data into actionable insights with powerful business intelligence dashboards. We design and build custom visualization solutions that give you real-time visibility into key metrics, enabling data-driven decision making across your organization."
+    },
+    industries: [
+      { name: "Retail", icon: "Store" },
+      { name: "Finance", icon: "DollarSign" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Manufacturing", icon: "Factory" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "SaaS", icon: "Cloud" }
+    ],
+    features: [
+      {
+        icon: "BarChart3",
+        title: "Custom Dashboards",
+        description: "Design intuitive, interactive dashboards tailored to your specific business metrics and user needs."
+      },
+      {
+        icon: "Activity",
+        title: "Real-time Analytics",
+        description: "Monitor live data streams and get instant updates on critical business metrics and performance indicators."
+      },
+      {
+        icon: "Target",
+        title: "KPI Tracking",
+        description: "Define and track custom key performance indicators aligned with your strategic business objectives."
+      },
+      {
+        icon: "Filter",
+        title: "Advanced Filtering",
+        description: "Drill down into data with dynamic filters, slicers, and interactive elements for deeper analysis."
+      },
+      {
+        icon: "Smartphone",
+        title: "Mobile Access",
+        description: "Access your business intelligence on any device with responsive dashboards optimized for mobile viewing."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A collaborative approach to building BI solutions that empower your team with actionable insights.",
+      steps: [
+        {
+          number: "01",
+          icon: "MessageSquare",
+          title: "Requirements Workshop",
+          description: "Identify key stakeholders, business questions, metrics, and data sources needed for your dashboard."
+        },
+        {
+          number: "02",
+          icon: "Database",
+          title: "Data Integration",
+          description: "Connect and integrate multiple data sources, establishing ETL pipelines for clean, consistent data."
+        },
+        {
+          number: "03",
+          icon: "Layout",
+          title: "Dashboard Design",
+          description: "Create wireframes and visual designs that present information clearly with effective data visualization."
+        },
+        {
+          number: "04",
+          icon: "Code",
+          title: "Development & Testing",
+          description: "Build interactive dashboards with calculated fields, measures, and thoroughly test functionality."
+        },
+        {
+          number: "05",
+          icon: "Users2",
+          title: "Training & Deployment",
+          description: "Deploy dashboards, train users, and provide ongoing support for continuous improvement."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Strategic Data Insights",
+        slug: "strategic-data-insights",
+        category: "INSIGHTS"
+      },
+      {
+        title: "Data Collection & Research",
+        slug: "data-collection-research",
+        category: "DATA RESEARCH"
+      },
+      {
+        title: "CRM & Database Management",
+        slug: "crm-database-management",
+        category: "MANAGEMENT"
+      }
+    ]
+  },
+
+  'document-digitization': {
+    hero: {
+      category: "DIGITIZATION",
+      title: "Document",
+      subtitle: "Digitization",
+      image: "https://images.unsplash.com/photo-1568667256549-094345857637?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "OCR, Document Management Systems, Cloud Storage, AI",
+      keyFeatures: "Document scanning, OCR conversion, Digital archiving",
+      description: "Convert paper documents and physical records into searchable digital assets. Our document digitization services use advanced OCR technology and quality controls to transform your archives into accessible, organized, and secure digital repositories."
+    },
+    industries: [
+      { name: "Legal", icon: "Scale" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Finance", icon: "Landmark" },
+      { name: "Government", icon: "Building2" },
+      { name: "Education", icon: "GraduationCap" },
+      { name: "Corporate", icon: "Briefcase" }
+    ],
+    features: [
+      {
+        icon: "FileText",
+        title: "Document Scanning",
+        description: "High-quality scanning of papers, books, forms, and records with optimal resolution and format conversion."
+      },
+      {
+        icon: "Type",
+        title: "OCR Processing",
+        description: "Advanced optical character recognition to convert scanned documents into searchable, editable text."
+      },
+      {
+        icon: "FolderTree",
+        title: "Digital Organization",
+        description: "Structured filing systems with metadata tagging, categorization, and searchable indexes for easy retrieval."
+      },
+      {
+        icon: "Lock",
+        title: "Secure Archiving",
+        description: "Encrypted cloud storage with access controls, backup systems, and compliance with data protection regulations."
+      },
+      {
+        icon: "CheckCircle",
+        title: "Quality Control",
+        description: "Multi-stage verification processes to ensure accuracy, completeness, and readability of digitized content."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A systematic digitization workflow that preserves document integrity while maximizing accessibility.",
+      steps: [
+        {
+          number: "01",
+          icon: "ClipboardList",
+          title: "Document Assessment",
+          description: "Evaluate document types, volumes, condition, and special requirements for digitization planning."
+        },
+        {
+          number: "02",
+          icon: "Package",
+          title: "Preparation & Sorting",
+          description: "Organize, remove bindings, repair damaged documents, and prepare materials for optimal scanning."
+        },
+        {
+          number: "03",
+          icon: "Scan",
+          title: "Scanning & OCR",
+          description: "Execute high-quality scanning with appropriate settings and apply OCR technology for text extraction."
+        },
+        {
+          number: "04",
+          icon: "FileCheck",
+          title: "Quality Verification",
+          description: "Review scanned images, validate OCR accuracy, and ensure all documents meet quality standards."
+        },
+        {
+          number: "05",
+          icon: "Cloud",
+          title: "Digital Delivery",
+          description: "Deliver organized digital files with indexing, metadata, and secure cloud storage or system integration."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Data Collection & Research",
+        slug: "data-collection-research",
+        category: "DATA RESEARCH"
+      },
+      {
+        title: "CRM & Database Management",
+        slug: "crm-database-management",
+        category: "MANAGEMENT"
+      },
+      {
+        title: "Workflow Automation",
+        slug: "workflow-automation",
+        category: "AUTOMATION"
+      }
+    ]
+  },
+
+  'workflow-automation': {
+    hero: {
+      category: "AUTOMATION",
+      title: "Workflow",
+      subtitle: "Automation",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Zapier, Make, Power Automate, Python, RPA Tools",
+      keyFeatures: "Process automation, Integration, Efficiency gains",
+      description: "Eliminate repetitive tasks and streamline operations with intelligent workflow automation. We design and implement custom automation solutions that connect your systems, reduce manual work, and free your team to focus on high-value activities."
+    },
+    industries: [
+      { name: "Finance", icon: "DollarSign" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "Manufacturing", icon: "Factory" },
+      { name: "Professional Services", icon: "Briefcase" },
+      { name: "Technology", icon: "Cpu" }
+    ],
+    features: [
+      {
+        icon: "Workflow",
+        title: "Process Automation",
+        description: "Automate repetitive tasks, approval workflows, and business processes to increase efficiency and accuracy."
+      },
+      {
+        icon: "Link2",
+        title: "System Integration",
+        description: "Connect disparate applications and systems to enable seamless data flow and eliminate manual data entry."
+      },
+      {
+        icon: "Bot",
+        title: "Robotic Process Automation",
+        description: "Deploy software robots to handle high-volume, rule-based tasks with speed and precision."
+      },
+      {
+        icon: "Bell",
+        title: "Smart Notifications",
+        description: "Automated alerts and notifications to keep teams informed of critical events and required actions."
+      },
+      {
+        icon: "BarChart2",
+        title: "Performance Monitoring",
+        description: "Track automation performance, error rates, and time savings with detailed analytics and reporting."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A strategic approach to automation that maximizes ROI while ensuring reliability and scalability.",
+      steps: [
+        {
+          number: "01",
+          icon: "Search",
+          title: "Process Discovery",
+          description: "Identify automation opportunities, document current workflows, and assess impact and feasibility."
+        },
+        {
+          number: "02",
+          icon: "Map",
+          title: "Automation Design",
+          description: "Design optimized workflows, define integration points, and establish error handling and monitoring."
+        },
+        {
+          number: "03",
+          icon: "Code",
+          title: "Development & Testing",
+          description: "Build automation solutions with robust error handling and conduct thorough testing across scenarios."
+        },
+        {
+          number: "04",
+          icon: "Rocket",
+          title: "Deployment & Training",
+          description: "Deploy automation to production environment and train team members on monitoring and maintenance."
+        },
+        {
+          number: "05",
+          icon: "TrendingUp",
+          title: "Optimize & Scale",
+          description: "Monitor performance, gather feedback, and continuously improve and expand automation coverage."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "CRM & Database Management",
+        slug: "crm-database-management",
+        category: "MANAGEMENT"
+      },
+      {
+        title: "Business Intelligence Dashboards",
+        slug: "business-intelligence-dashboards",
+        category: "INTELLIGENCE"
+      },
+      {
+        title: "Web Development",
+        slug: "web-development",
+        category: "DEV"
+      }
+    ]
+  },
+
+  'quality-assurance-validation': {
+    hero: {
+      category: "QUALITY",
+      title: "Quality Assurance",
+      subtitle: "& Validation",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Selenium, Jest, QA Tools, Test Automation, Manual Testing",
+      keyFeatures: "Software testing, Quality control, Bug detection",
+      description: "Ensure flawless software quality with comprehensive QA and validation services. Our expert testing team combines automated and manual testing methodologies to identify issues early, reduce risk, and deliver products that meet the highest quality standards."
+    },
+    industries: [
+      { name: "Software Development", icon: "Code" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Finance", icon: "Landmark" },
+      { name: "Gaming", icon: "Gamepad" },
+      { name: "Enterprise", icon: "Building2" }
+    ],
+    features: [
+      {
+        icon: "TestTube",
+        title: "Functional Testing",
+        description: "Comprehensive testing of features, workflows, and user scenarios to ensure proper functionality."
+      },
+      {
+        icon: "Zap",
+        title: "Automated Testing",
+        description: "Build robust test automation suites for regression testing, continuous integration, and rapid feedback."
+      },
+      {
+        icon: "Users",
+        title: "User Acceptance Testing",
+        description: "Validate that software meets business requirements and user expectations through structured UAT processes."
+      },
+      {
+        icon: "Gauge",
+        title: "Performance Testing",
+        description: "Assess application speed, scalability, and stability under various load conditions and user volumes."
+      },
+      {
+        icon: "Shield",
+        title: "Security Testing",
+        description: "Identify vulnerabilities, test authentication mechanisms, and ensure compliance with security standards."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A rigorous testing methodology that ensures comprehensive coverage and early defect detection.",
+      steps: [
+        {
+          number: "01",
+          icon: "FileText",
+          title: "Test Planning",
+          description: "Define testing scope, objectives, test strategies, and create comprehensive test plans and schedules."
+        },
+        {
+          number: "02",
+          icon: "ClipboardList",
+          title: "Test Case Design",
+          description: "Develop detailed test cases covering all features, edge cases, and user scenarios with expected results."
+        },
+        {
+          number: "03",
+          icon: "Play",
+          title: "Test Execution",
+          description: "Execute manual and automated tests, document results, and track defects through resolution."
+        },
+        {
+          number: "04",
+          icon: "Bug",
+          title: "Defect Management",
+          description: "Log, prioritize, and track bugs with detailed reproduction steps and work with development for fixes."
+        },
+        {
+          number: "05",
+          icon: "CheckCircle",
+          title: "Final Validation",
+          description: "Conduct regression testing, validate bug fixes, and provide comprehensive quality reports."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Web Development",
+        slug: "web-development",
+        category: "DEV"
+      },
+      {
+        title: "AI Model Training & Annotation",
+        slug: "ai-model-training-annotation",
+        category: "AI TRAINING"
+      },
+      {
+        title: "Website Audit",
+        slug: "website-audit",
+        category: "AUDIT"
+      }
+    ]
+  },
+
+  'crm-database-management': {
+    hero: {
+      category: "MANAGEMENT",
+      title: "CRM & Database",
+      subtitle: "Management",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Salesforce, HubSpot, SQL, MongoDB, CRM Systems",
+      keyFeatures: "Customer management, Data organization, System optimization",
+      description: "Optimize customer relationships and data management with professional CRM and database solutions. We implement, customize, and maintain systems that centralize customer information, automate workflows, and provide insights to drive sales and customer satisfaction."
+    },
+    industries: [
+      { name: "Sales", icon: "TrendingUp" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Real Estate", icon: "Home" },
+      { name: "Finance", icon: "DollarSign" },
+      { name: "Professional Services", icon: "Briefcase" }
+    ],
+    features: [
+      {
+        icon: "Users2",
+        title: "CRM Implementation",
+        description: "Setup and configure CRM platforms tailored to your sales processes, customer journey, and business needs."
+      },
+      {
+        icon: "Database",
+        title: "Database Design",
+        description: "Architect efficient database structures that ensure data integrity, performance, and scalability."
+      },
+      {
+        icon: "RefreshCw",
+        title: "Data Migration",
+        description: "Seamlessly transfer data from legacy systems to new platforms with zero data loss and minimal downtime."
+      },
+      {
+        icon: "Settings",
+        title: "Custom Workflows",
+        description: "Design automated workflows, triggers, and business rules to streamline operations and ensure consistency."
+      },
+      {
+        icon: "BarChart3",
+        title: "Reporting & Analytics",
+        description: "Create custom reports and dashboards that provide visibility into customer behavior and sales performance."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A strategic implementation approach that ensures CRM success and user adoption across your organization.",
+      steps: [
+        {
+          number: "01",
+          icon: "Target",
+          title: "Needs Assessment",
+          description: "Analyze current processes, pain points, and requirements to define CRM objectives and scope."
+        },
+        {
+          number: "02",
+          icon: "Boxes",
+          title: "System Design",
+          description: "Design CRM architecture, custom fields, workflows, and integration points with existing systems."
+        },
+        {
+          number: "03",
+          icon: "Settings",
+          title: "Configuration & Setup",
+          description: "Configure CRM platform, import data, set up user roles, and establish security permissions."
+        },
+        {
+          number: "04",
+          icon: "Users",
+          title: "Training & Rollout",
+          description: "Provide comprehensive user training, create documentation, and execute phased rollout strategy."
+        },
+        {
+          number: "05",
+          icon: "Wrench",
+          title: "Support & Optimization",
+          description: "Offer ongoing support, gather user feedback, and continuously optimize system for better results."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Business Intelligence Dashboards",
+        slug: "business-intelligence-dashboards",
+        category: "INTELLIGENCE"
+      },
+      {
+        title: "Workflow Automation",
+        slug: "workflow-automation",
+        category: "AUTOMATION"
+      },
+      {
+        title: "Data Collection & Research",
+        slug: "data-collection-research",
+        category: "DATA RESEARCH"
+      }
+    ]
+  },
+
+  'strategic-data-insights': {
+    hero: {
+      category: "INSIGHTS",
+      title: "Strategic Data",
+      subtitle: "Insights",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "Python, R, Advanced Analytics, Machine Learning, Statistics",
+      keyFeatures: "Predictive analytics, Data modeling, Strategic recommendations",
+      description: "Transform data into strategic competitive advantage with advanced analytics and insights. Our data science experts uncover hidden patterns, predict future trends, and provide actionable recommendations that drive growth, efficiency, and informed decision-making."
+    },
+    industries: [
+      { name: "Retail", icon: "Store" },
+      { name: "Finance", icon: "DollarSign" },
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Technology", icon: "Cpu" },
+      { name: "Manufacturing", icon: "Factory" },
+      { name: "E-commerce", icon: "ShoppingCart" }
+    ],
+    features: [
+      {
+        icon: "TrendingUp",
+        title: "Predictive Analytics",
+        description: "Forecast future trends, customer behavior, and business outcomes using advanced statistical modeling."
+      },
+      {
+        icon: "Target",
+        title: "Customer Segmentation",
+        description: "Identify distinct customer groups based on behavior, preferences, and value for targeted strategies."
+      },
+      {
+        icon: "Brain",
+        title: "Machine Learning Models",
+        description: "Build custom ML models for classification, recommendation, fraud detection, and optimization problems."
+      },
+      {
+        icon: "FileText",
+        title: "Strategic Reports",
+        description: "Deliver comprehensive analytical reports with clear insights, visualizations, and actionable recommendations."
+      },
+      {
+        icon: "Eye",
+        title: "Opportunity Identification",
+        description: "Uncover hidden opportunities for revenue growth, cost reduction, and operational improvements."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A data-driven methodology that turns complex data into clear strategic insights and recommendations.",
+      steps: [
+        {
+          number: "01",
+          icon: "MessageSquare",
+          title: "Business Understanding",
+          description: "Understand your business objectives, challenges, and define analytical questions to address."
+        },
+        {
+          number: "02",
+          icon: "Database",
+          title: "Data Preparation",
+          description: "Collect, clean, and transform data from multiple sources into analysis-ready datasets."
+        },
+        {
+          number: "03",
+          icon: "LineChart",
+          title: "Analysis & Modeling",
+          description: "Apply statistical analysis, data mining, and machine learning techniques to extract insights."
+        },
+        {
+          number: "04",
+          icon: "Lightbulb",
+          title: "Insight Generation",
+          description: "Interpret results, identify patterns, and develop strategic recommendations based on findings."
+        },
+        {
+          number: "05",
+          icon: "Presentation",
+          title: "Presentation & Action Plan",
+          description: "Present insights with visualizations, create implementation roadmap, and support execution."
+        }
+      ]
+    },
+    relatedServices: [
+      {
+        title: "Business Intelligence Dashboards",
+        slug: "business-intelligence-dashboards",
+        category: "INTELLIGENCE"
+      },
+      {
+        title: "Data Collection & Research",
+        slug: "data-collection-research",
+        category: "DATA RESEARCH"
+      },
+      {
+        title: "Digital Strategy",
+        slug: "digital-strategy",
+        category: "STRATEGY"
+      }
+    ]
   }
 };
 

@@ -6,8 +6,7 @@ const Navbar = () => {
 
   // Check if current page has white background (requires different styling)
   const isWhiteBackgroundPage = window.location.pathname === '/contact' ||
-                               window.location.pathname === '/services' ||
-                               window.location.pathname.includes('/services') ||
+                               window.location.pathname.includes('/services/') ||
                                /^\/solutions\/[^/]+$/.test(window.location.pathname);
 
   useEffect(() => {
