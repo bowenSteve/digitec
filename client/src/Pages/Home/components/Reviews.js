@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentButton from '../../../Components/CommentButton';
 
 const Reviews = () => {
   const testimonials = [
@@ -92,28 +93,14 @@ const Reviews = () => {
           {/* Enhanced Leave Comment Button */}
           <div className="hidden lg:block">
             <div className="relative w-fit inline-block p-[2px] rounded-full bg-gradient-to-tr from-red-600 to-transparent transition-all duration-500 hover:bg-gradient-to-br hover:from-red-500 hover:to-transparent animate-gradient">
-              <button className="bg-white text-black border-none pt-4 pb-4 pl-10 pr-16 text-base rounded-full relative">
-                <span className="relative z-10 text-center font-semibold text-base pr-2">Leave a comment</span>
-                <div className="absolute bg-red-500 rounded-full flex justify-center items-center z-10 text-white w-8 h-8 right-2 top-2">
-                  <svg className="w-4 h-4 transform transition-transform duration-500 hover:-rotate-45" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2m0 15.2L18.8 16H4V4h16z"></path>
-                  </svg>
-                </div>
-              </button>
+              <CommentButton />
             </div>
           </div>
         </div>
 
         {/* Mobile Leave Comment Button */}
         <div className="lg:hidden mt-12 text-center">
-          <button className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 inline-flex items-center gap-2">
-            Leave a comment
-            <div className="w-6 h-6 bg-red-500 text-white rounded flex items-center justify-center text-sm">
-              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-              </svg>
-            </div>
-          </button>
+          <CommentButton />
         </div>
       </div>
 
