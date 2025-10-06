@@ -8,6 +8,9 @@ import Solutions from "../Pages/Solutions/Solutions"
 import SolutionDetail from "../Pages/Solutions/Sub-Solutions/SolutionDetail"
 import Industries from "../Pages/Industries/Industries"
 import Resources from "../Pages/Resources/Resources"
+import TermsOfUse from "../Pages/Legal/TermsOfUse"
+import PrivacyPolicy from "../Pages/Legal/PrivacyPolicy"
+import CookiePolicy from "../Pages/Legal/CookiePolicy"
 
 const routes = [
     {
@@ -49,6 +52,18 @@ const routes = [
     {
         path: '/resources',
         element: <Resources />
+    },
+    {
+        path: '/terms-of-use',
+        element: <TermsOfUse />
+    },
+    {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy />
+    },
+    {
+        path: '/cookie-policy',
+        element: <CookiePolicy />
     }
 ]
 

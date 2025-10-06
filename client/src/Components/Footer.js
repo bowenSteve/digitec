@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -156,15 +157,15 @@ const Footer = () => {
                 Copyright ©{currentYear} InfoBridge NiaTech | All Rights Reserved
               </div>
               <div className="flex space-x-6 text-sm">
-                <a href="#terms" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                <Link to="/terms-of-use" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Terms of Use
-                </a>
-                <a href="#privacy" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                </Link>
+                <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Privacy Policy
-                </a>
-                <a href="#cookies" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                </Link>
+                <Link to="/cookie-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Cookie Policy
-                </a>
+                </Link>
               </div>
             </div>
           </div>
