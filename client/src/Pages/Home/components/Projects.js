@@ -57,7 +57,7 @@ const Projects = () => {
     },
     {
       title: "Smart City Infrastructure",
-      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       services: ["urban planning", "data integration", "IoT analytics"],
       description: "Comprehensive urban data platform for city planning and management"
     }

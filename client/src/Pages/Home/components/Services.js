@@ -47,7 +47,7 @@ const Services = () => {
       category: "AUTOMATION",
       title: "Workflow Automation",
       slug: "workflow-automation",
-      backgroundImage: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["process automation", "efficiency", "optimization"],
       description: "Streamline business processes through intelligent automation solutions that reduce manual work and increase productivity."
     },
