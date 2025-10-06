@@ -7,34 +7,34 @@ const Footer = () => {
     {
       title: 'SOLUTIONS',
       links: [
-        { name: 'Computer Vision', href: '#computer-vision' },
-        { name: 'Natural Language Processing', href: '#nlp' },
-        { name: 'Generative AI', href: '#generative-ai' },
-        { name: 'Data & Content Services', href: '#data-services' }
+        { name: 'Computer Vision', href: '/solutions/computer-vision' },
+        { name: 'Natural Language Processing', href: '/solutions/natural-language-processing' },
+        { name: 'Generative AI', href: '/solutions/generative-ai' },
+        { name: 'Data & Content Services', href: '/solutions/data-content-services' }
       ]
     },
     {
-      title: 'INDUSTRIES',
+      title: 'SERVICES',
       links: [
-        { name: 'Technology', href: '#technology' },
-        { name: 'Healthcare', href: '#healthcare' },
-        { name: 'Automotive', href: '#automotive' },
-        { name: 'Financial Services', href: '#finance' }
+        { name: 'Website Creation', href: '/services/website-creation' },
+        { name: 'Search Engine Optimization', href: '/services/search-engine-optimization' },
+        { name: 'Branding & Visual Design', href: '/services/branding-visual-design' },
+        { name: 'Web Development', href: '/services/web-development' }
       ]
     },
     {
       title: 'RESOURCES',
       links: [
-        { name: 'Content Library', href: '#content' },
-        { name: 'Blog', href: '#blog' },
-        { name: 'Case Studies', href: '#case-studies' },
-        { name: 'Events', href: '#events' }
+        { name: 'Content Library', href: '/resources' },
+        { name: 'Blog', href: '/resources' },
+        { name: 'Case Studies', href: '/resources' },
+        { name: 'Events', href: '/resources' }
       ]
     },
     {
       title: 'ABOUT',
       links: [
-        { name: 'Company', href: '#company' },
+        { name: 'Company', href: '/about' },
         { name: 'Careers', href: '#careers' },
         { name: 'Impact', href: '#impact' },
         { name: 'Contact', href: '/contact' }

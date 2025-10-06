@@ -3,8 +3,11 @@ import About from "../Pages/About/About"
 import Contact from "../Pages/Contact/Contact"
 import Projects from "../Pages/Projects/Projects"
 import Services from "../Pages/Services/Services"
+import ServiceDetail from "../Pages/Services/Sub-Services/ServiceDetail"
 import Solutions from "../Pages/Solutions/Solutions"
 import SolutionDetail from "../Pages/Solutions/Sub-Solutions/SolutionDetail"
+import Industries from "../Pages/Industries/Industries"
+import Resources from "../Pages/Resources/Resources"
 
 const routes = [
     {
@@ -28,13 +31,24 @@ const routes = [
         element: <Services />
     },
     {
-
+        path: '/services/:slug',
+        element: <ServiceDetail />
+    },
+    {
         path: '/solutions',
         element: <Solutions />
     },
     {
         path: '/solutions/:slug',
         element: <SolutionDetail />
+    },
+    {
+        path: '/industries',
+        element: <Industries />
+    },
+    {
+        path: '/resources',
+        element: <Resources />
     }
 ]
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronDown, Search, Calendar, User, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
@@ -14,7 +15,7 @@ function Projects() {
       id: 1,
       title: "LiDAR Point Cloud Processing",
       category: "lidar",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["Python", "PCL", "CloudCompare", "PDAL"],
       description: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
       status: "Completed",
@@ -113,6 +114,19 @@ function Projects() {
       featured: true,
       githubUrl: "#",
       demoUrl: "#"
+    },
+    {
+      id: 9,
+      title: "Custom Software Development",
+      category: "software-development",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
+      description: "Tailored software solutions designed to meet specific business requirements and optimize workflows",
+      status: "Completed",
+      duration: "10 months",
+      featured: false,
+      githubUrl: "#",
+      demoUrl: "#"
     }
   ];
 
@@ -162,70 +176,184 @@ function Projects() {
     return status === 'Completed' ? 'bg-green-100 text-green-800 border-green-200' : 'bg-blue-100 text-blue-800 border-blue-200';
   };
 
+  const ProjectCard = ({ project, index }) => {
+    // First row (first 3 cards) should be visible immediately
+    const [isVisible, setIsVisible] = useState(index < 3);
+
+    useEffect(() => {
+      // If it's in the first row, keep it visible
+      if (index < 3) {
+        setIsVisible(true);
+        return;
+      }
+
+      const handleScroll = () => {
+        const element = document.getElementById(`project-${project.id}`);
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Calculate which row this card is in (assuming 3 cards per row)
+        const rowIndex = Math.floor(index / 3);
+
+        // Check if we've scrolled 75% past the previous row
+        const shouldShow = rect.top < windowHeight * 0.75 + (rowIndex * 100);
+
+        setIsVisible(shouldShow);
+      };
+
+      // Initial check
+      handleScroll();
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [index, project.id]);
+
+    return (
+      <div
+        id={`project-${project.id}`}
+        className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group relative transition-all duration-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
+        }`}
+        style={{ transitionDuration: '800ms' }}
+      >
+        <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
+            <a
+              href={project.demoUrl}
+              className="p-2 bg-white/90 backdrop-blur rounded-full hover:bg-white transition-colors"
+              title="View Demo"
+            >
+              <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
+            </a>
+            <a
+              href={project.githubUrl}
+              className="p-2 bg-white/90 backdrop-blur rounded-full hover:bg-white transition-colors"
+              title="View Code"
+            >
+              <Tag className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
+            </a>
+          </div>
+        </div>
+
+        <div className="p-4 sm:p-6">
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition-colors leading-tight">
+            {project.title}
+          </h3>
+
+          <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+            {project.description}
+          </p>
+
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
+            {project.technologies.slice(0, 3).map((tech, techIndex) => (
+              <span
+                key={techIndex}
+                className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium"
+              >
+                {tech}
+              </span>
+            ))}
+            {project.technologies.length > 3 && (
+              <span className="px-2 py-1 bg-gray-50 text-gray-500 text-xs rounded-md">
+                +{project.technologies.length - 3}
+              </span>
+            )}
+          </div>
+
+          <div className="mb-4 sm:mb-6">
+            <div className="text-sm text-gray-500">
+              Duration: {project.duration}
+            </div>
+          </div>
+
+          <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-y-0 translate-y-2">
+            <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 relative pr-14">
+              <span>See more</span>
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-sm transition-transform duration-500 group-hover:rotate-[-45deg]">
+                →
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar/>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 sm:py-20 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12 sm:mb-16">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className="text-red-400 text-xs sm:text-sm font-semibold uppercase tracking-wider">
-                OUR PORTFOLIO
-              </span>
-              <div className="flex gap-1">
-                <div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                <div className="w-2 h-2 bg-red-300 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-2 h-2 bg-red-200 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
-              </div>
-            </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
-              Our Projects
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-2">
-              Explore our comprehensive portfolio of innovative solutions spanning LiDAR processing,
-              software development, testing automation, and advanced data analytics.
-            </p>
-            <div className="flex flex-col gap-4 justify-center items-center max-w-2xl mx-auto">
-              <div className="relative w-full max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-5 sm:h-5" />
-                <input
-                  type="text"
-                  placeholder="Search projects..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 text-sm sm:text-base rounded-full text-gray-900 bg-white/90 backdrop-blur focus:bg-white focus:outline-none focus:ring-2 focus:ring-red-500"
-                />
-              </div>
-              <div className="relative">
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-6 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transition-colors text-sm sm:text-base"
-                >
-                  Filters
-                  <ChevronDown className={`w-4 h-4 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
-                </button>
-                {showFilters && (
-                  <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 sm:left-auto sm:right-0 sm:transform-none bg-white rounded-lg shadow-xl p-4 z-10 min-w-48">
-                    <div className="mb-3">
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Sort by:</label>
-                      <select
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value)}
-                        className="w-full p-2 border border-gray-300 rounded-md text-gray-900 text-sm"
-                      >
-                        <option value="title">Title</option>
-                        <option value="status">Status</option>
-                        <option value="featured">Featured</option>
-                      </select>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'}}>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/80 to-gray-900/70"></div>
+          {/* Grid Pattern Overlay */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0" style={{
+              backgroundImage: 'linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}></div>
           </div>
         </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-6 animate-fade-in">
+            <span className="text-red-400 text-sm font-semibold uppercase tracking-wider">
+              OUR PORTFOLIO
+            </span>
+            <div className="flex gap-1">
+              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+            </div>
+          </div>
+
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight animate-slide-up">
+            Innovative Projects & Solutions
+            <br />
+            <span className="text-red-400">Built with Precision & Expertise</span>
+          </h1>
+
+          <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto animate-slide-up-delayed">
+            Explore our comprehensive portfolio of innovative solutions spanning LiDAR processing,
+            software development, testing automation, and advanced data analytics.
+          </p>
+        </div>
+
+        {/* Animated Blobs */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-red-400/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-red-400/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+
+        {/* Animations */}
+        <style jsx>{`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in {
+            animation: fadeIn 0.8s ease-out;
+          }
+          .animate-slide-up {
+            animation: slideUp 0.8s ease-out 0.2s both;
+          }
+          .animate-slide-up-delayed {
+            animation: slideUp 0.8s ease-out 0.4s both;
+          }
+        `}</style>
       </section>
 
       {/* Filter Tabs */}
@@ -259,95 +387,16 @@ function Projects() {
 
       {/* Projects Grid */}
       <section className="py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="mb-6 sm:mb-8 flex justify-between items-center">
             <p className="text-gray-600 text-sm sm:text-base">
               Showing {filteredProjects.length} of {projects.length} projects
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group relative ${
-                  project.featured ? 'ring-2 ring-red-200' : ''
-                }`}
-              >
-                {project.featured && (
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 bg-red-500 text-white text-xs font-medium rounded-full">
-                      Featured
-                    </span>
-                  </div>
-                )}
-
-                <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(project.status)}`}>
-                      {project.status}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.demoUrl}
-                      className="p-2 bg-white/90 backdrop-blur rounded-full hover:bg-white transition-colors"
-                      title="View Demo"
-                    >
-                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="p-2 bg-white/90 backdrop-blur rounded-full hover:bg-white transition-colors"
-                      title="View Code"
-                    >
-                      <Tag className="w-3 h-3 sm:w-4 sm:h-4 text-gray-700" />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 group-hover:text-red-500 transition-colors leading-tight">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-                    {project.technologies.slice(0, 3).map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-50 text-gray-500 text-xs rounded-md">
-                        +{project.technologies.length - 3}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="mb-4 sm:mb-6">
-                    <div className="text-sm text-gray-500">
-                      Duration: {project.duration}
-                    </div>
-                  </div>
-
-                  <button className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-2.5 sm:py-3 rounded-lg font-medium hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                    View Details
-                  </button>
-                </div>
-              </div>
+          <div className="grid gap-8" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(345px, 1fr))' }}>
+            {filteredProjects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
 
@@ -364,22 +413,39 @@ function Projects() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 sm:py-20 bg-gradient-to-r from-red-500 to-red-600 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
-            Ready to Start Your Next Project?
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl mb-8 text-red-100 max-w-2xl mx-auto">
-            Let's discuss how our expertise can help you achieve your goals and bring your vision to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-            <button className="bg-white text-red-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-base sm:text-lg hover:bg-gray-100 transition-colors transform hover:scale-105">
-              Get Started Today
-            </button>
-            <button className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium text-base sm:text-lg hover:bg-white hover:text-red-600 transition-colors">
-              View Our Services
-            </button>
+      <section className="w-full max-w-[1000px] mx-auto my-20 -mb-8 px-5 py-14 bg-white rounded-2xl shadow-xl relative z-20">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+          <div className="flex-1">
+            <div className="flex items-center gap-5 mb-4">
+              <p className="uppercase text-base m-0 text-red-500 font-semibold whitespace-nowrap">
+                START YOUR PROJECT
+              </p>
+              <hr className="flex-1 border-gray-300" />
+              <div className="flex gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              </div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-semibold uppercase mb-4 text-gray-900">
+              READY TO BUILD SOMETHING GREAT?
+            </h2>
+            <p className="text-base text-gray-600 leading-relaxed">
+              Let's discuss how our expertise can help you achieve your goals. From initial
+              consultation to final delivery, we're committed to bringing your vision to life
+              with precision and innovation.
+            </p>
           </div>
+          <Link
+            to="/contact"
+            onClick={() => window.scrollTo(0, 0)}
+            className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg relative pr-16 whitespace-nowrap no-underline"
+          >
+            <span>Let's talk</span>
+            <div className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-base">
+              →
+            </div>
+          </Link>
         </div>
       </section>
 
