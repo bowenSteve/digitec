@@ -20,9 +20,9 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'SERVICES', href: '/services' },
-    { name: 'INDUSTRIES', href: '/industries' },
+    // { name: 'INDUSTRIES', href: '/industries' },
     { name: 'SOLUTIONS', href: '/solutions' },
-    { name: 'RESOURCES', href: '/resources' },
+    // { name: 'RESOURCES', href: '/resources' },
     { name: 'PROJECTS', href: '/projects' },
     { name: 'ABOUT', href: '/about' }
   ];
