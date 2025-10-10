@@ -16,6 +16,14 @@ const SolutionsCont = () => {
 
   const solutions = [
     {
+      title: "Image & Video Annotation",
+      slug: "image-video-annotation",
+      image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      description: "Professional image and video annotation services for training computer vision models. Our expert annotators deliver pixel-perfect labels with bounding boxes, polygons, semantic segmentation, and keypoint annotation for diverse AI applications.",
+      tags: ["bounding boxes", "semantic segmentation", "video tracking"],
+      category: "ANNOTATION"
+    },
+    {
       title: "Computer Vision",
       slug: "computer-vision",
       image: "https://www.peopleforai.com/wp-content/uploads/2025/03/tiny-featured-image.png",

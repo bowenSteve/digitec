@@ -53,35 +53,35 @@ const ContactForm = () => {
     }, 1500);
   };
 
-  const services = [
-    'Website Creation',
-    'Search Engine Optimization (SEO)',
-    'Branding & Visual Design',
-    'Paid Search (SEA)',
-    'Social Media Management',
-    'Digital Strategy',
-    'Website Content Updates',
-    'Domain & Hosting Services',
-    'Website Maintenance',
-    'Web Design & Print',
-    'Web Development',
-    'Photo & Video Production',
-    'Website Audit',
-    'Custom Web Design',
-    'Logo Design',
-    'Google My Business',
-    'Print Design Services',
-    'Newsletter & Email Marketing'
-  ];
+  // const services = [
+  //   'Website Creation',
+  //   'Search Engine Optimization (SEO)',
+  //   'Branding & Visual Design',
+  //   'Paid Search (SEA)',
+  //   'Social Media Management',
+  //   'Digital Strategy',
+  //   'Website Content Updates',
+  //   'Domain & Hosting Services',
+  //   'Website Maintenance',
+  //   'Web Design & Print',
+  //   'Web Development',
+  //   'Photo & Video Production',
+  //   'Website Audit',
+  //   'Custom Web Design',
+  //   'Logo Design',
+  //   'Google My Business',
+  //   'Print Design Services',
+  //   'Newsletter & Email Marketing'
+  // ];
 
-  const budgetRanges = [
-    'Less than $5,000',
-    '$5,000 - $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000+',
-    'Not sure yet'
-  ];
+  // const budgetRanges = [
+  //   'Less than $5,000',
+  //   '$5,000 - $10,000',
+  //   '$10,000 - $25,000',
+  //   '$25,000 - $50,000',
+  //   '$50,000+',
+  //   'Not sure yet'
+  // ];
 
   return (
     <section className="w-full mx-auto mb-20 lg:mb-40 px-5 sm:px-8 xl:px-20 2xl:px-20 max-w-screen-2xl">
@@ -202,7 +202,7 @@ const ContactForm = () => {
               </div>
 
               {/* Service and Budget */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
                     Service Needed <span className="text-red-500">*</span>
@@ -239,7 +239,7 @@ const ContactForm = () => {
                     ))}
                   </select>
                 </div>
-              </div>
+              </div> */}
 
               {/* Message */}
               <div>
