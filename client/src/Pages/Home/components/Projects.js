@@ -154,16 +154,27 @@ const Projects = () => {
         cursor: isHoveringProjects ? 'none' : 'default' 
       }}
     >
-      {/* Custom Cursor Circle */}
+      {/* Custom Cursor */}
       {isHoveringProjects && (
         <div
-          className="fixed pointer-events-none z-50 w-16 h-16 border-2 border-red-500 rounded-full mix-blend-difference"
+          className="fixed w-24 h-24 pointer-events-none z-50"
           style={{
-            left: cursorPos.x - 32,
-            top: cursorPos.y - 32,
-            transition: 'transform 0.1s ease-out'
+            left: `${cursorPos.x}px`,
+            top: `${cursorPos.y}px`,
+            transform: 'translate(-50%, -50%)'
           }}
-        />
+        >
+          <div className="w-full h-full bg-red-500 rounded-full flex items-center justify-center animate-pulse">
+            <svg
+              className="w-8 h-8 text-white transform -rotate-45"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
       )}
 
       <div className="max-w-none px-6 lg:px-12">

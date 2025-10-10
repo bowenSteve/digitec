@@ -1,6 +1,159 @@
 // solutionsData.js - Central data file for all solution pages
 
 export const solutionsData = {
+  'image-video-annotation': {
+    hero: {
+      category: "DATA ANNOTATION",
+      title: "Image & Video",
+      subtitle: "Annotation",
+      image: "https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      technologies: "CVAT, Labelbox, V7, Custom Tools",
+      keyFeatures: "Bounding boxes, Semantic segmentation, Keypoint annotation",
+      description: "Professional image and video annotation services for training computer vision models. Our expert annotators deliver pixel-perfect labels with bounding boxes, polygons, semantic segmentation, and keypoint annotation for diverse AI applications."
+    },
+    industries: [
+      { name: "Autonomous Vehicles", icon: "Car" },
+      { name: "Healthcare & Medical", icon: "Heart" },
+      { name: "Retail & E-commerce", icon: "ShoppingBag" },
+      { name: "Security & Surveillance", icon: "Shield" },
+      { name: "Agriculture", icon: "Sprout" },
+      { name: "Manufacturing", icon: "Factory" }
+    ],
+    useCases: [
+      {
+        featured: true,
+        category: "AUTONOMOUS VEHICLES",
+        title: "Self-Driving Car Training Dataset",
+        description: "Leading automotive company annotates 2 million+ video frames with precise bounding boxes, lane markings, and object tracking for autonomous vehicle perception systems, achieving 99.5% annotation accuracy.",
+        image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["2M+ frames annotated", "99.5% accuracy", "50+ object classes"]
+      },
+      {
+        featured: false,
+        category: "HEALTHCARE & MEDICAL",
+        title: "Medical Image Segmentation",
+        description: "Research hospital annotates 100,000+ radiology images with pixel-level segmentation for tumor detection AI, supporting FDA approval process and improving diagnostic accuracy by 35%.",
+        image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["100K+ images annotated", "35% better diagnostics", "FDA pathway support"]
+      },
+      {
+        featured: false,
+        category: "RETAIL & E-COMMERCE",
+        title: "Product Recognition Dataset",
+        description: "E-commerce platform annotates 500,000+ product images with bounding boxes and attributes for visual search engine, enabling customers to find products 3x faster with 95% accuracy.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["500K+ products labeled", "3x faster search", "95% recognition rate"]
+      },
+      {
+        featured: false,
+        category: "SECURITY & SURVEILLANCE",
+        title: "Crowd Monitoring & Anomaly Detection",
+        description: "Security firm annotates 1 million+ surveillance video frames with person tracking and behavior labels, enabling real-time threat detection across 1,000+ camera installations.",
+        image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["1M+ frames processed", "1,000+ cameras", "Real-time detection"]
+      },
+      {
+        featured: false,
+        category: "AGRICULTURE",
+        title: "Crop Disease Detection Dataset",
+        description: "Agricultural tech company annotates 300,000+ plant images with disease classifications and affected area segmentation, enabling early detection that reduces crop loss by 40%.",
+        image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        results: ["300K+ plant images", "40% less crop loss", "20+ disease types"]
+      }
+    ],
+    features: [
+      {
+        icon: "Square",
+        title: "Bounding Box Annotation",
+        description: "Precise rectangular boxes around objects for object detection models, with support for multiple classes and hierarchical labeling."
+      },
+      {
+        icon: "Shapes",
+        title: "Polygon & Semantic Segmentation",
+        description: "Pixel-perfect polygons and semantic masks for instance segmentation, ideal for medical imaging and autonomous driving applications."
+      },
+      {
+        icon: "CircleDot",
+        title: "Keypoint & Landmark Annotation",
+        description: "Mark specific points on objects for pose estimation, facial recognition, and skeletal tracking in sports and healthcare applications."
+      },
+      {
+        icon: "Video",
+        title: "Video Object Tracking",
+        description: "Continuous object tracking across video frames with temporal consistency for motion analysis and activity recognition."
+      },
+      {
+        icon: "Layers",
+        title: "3D Cuboid Annotation",
+        description: "Three-dimensional bounding boxes for depth estimation and spatial understanding in robotics and AR/VR applications."
+      },
+      {
+        icon: "ShieldCheck",
+        title: "Quality Assurance & Validation",
+        description: "Multi-layer QA process with inter-annotator agreement checks, ensuring 95%+ accuracy for production-ready datasets."
+      }
+    ],
+    process: {
+      title: "Our Process",
+      description: "A rigorous annotation workflow that delivers consistent, high-quality labeled data for training robust computer vision models.",
+      steps: [
+        {
+          number: "01",
+          icon: "FileText",
+          title: "Project Setup & Guidelines",
+          description: "Define annotation requirements, create detailed labeling guidelines, and set up quality benchmarks with your team."
+        },
+        {
+          number: "02",
+          icon: "Users",
+          title: "Annotator Training",
+          description: "Train specialized annotators on your specific use case, annotation tools, and quality standards with test datasets."
+        },
+        {
+          number: "03",
+          icon: "Tag",
+          title: "Annotation & Labeling",
+          description: "Expert annotators label images and videos according to guidelines using industry-standard tools and custom workflows."
+        },
+        {
+          number: "04",
+          icon: "CheckCircle",
+          title: "Quality Control",
+          description: "Multi-layer QA process with automated validation, peer review, and expert verification to ensure accuracy and consistency."
+        },
+        {
+          number: "05",
+          icon: "Send",
+          title: "Delivery & Iteration",
+          description: "Deliver annotated datasets in your preferred format with documentation, and iterate based on model performance feedback."
+        }
+      ]
+    },
+    otherSolutions: [
+      {
+        title: "Computer Vision",
+        slug: "computer-vision",
+        image: "https://www.peopleforai.com/wp-content/uploads/2025/03/tiny-featured-image.png",
+        tags: ["object detection", "image segmentation", "facial recognition"],
+        category: "CV"
+      },
+      {
+        title: "Data & Content Services",
+        slug: "data-content-services",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        tags: ["data collection", "annotation", "processing"],
+        category: "DATA"
+      },
+      {
+        title: "Generative AI",
+        slug: "generative-ai",
+        image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        tags: ["content generation", "data synthesis"],
+        category: "GEN AI"
+      }
+    ]
+  },
+
   'computer-vision': {
     hero: {
       category: "AI SOLUTIONS",
