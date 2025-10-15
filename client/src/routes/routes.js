@@ -2,6 +2,7 @@ import Home from "../Pages/Home/Home"
 import About from "../Pages/About/About"
 import Contact from "../Pages/Contact/Contact"
 import Projects from "../Pages/Projects/Projects"
+import ProjectDetail from "../Pages/Projects/Sub-Projects/ProjectDetail"
 import Services from "../Pages/Services/Services"
 import ServiceDetail from "../Pages/Services/Sub-Services/ServiceDetail"
 import Solutions from "../Pages/Solutions/Solutions"
@@ -28,6 +29,10 @@ const routes = [
     {
         path: '/projects',
         element: <Projects />
+    },
+    {
+        path: '/projects/:slug',
+        element: <ProjectDetail />
     },
     {
         path: '/services',

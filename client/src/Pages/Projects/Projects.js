@@ -3,56 +3,121 @@ import { Link } from 'react-router-dom'
 import { ChevronDown, Search, Calendar, User, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
+import ProjectModal from "../../Components/ProjectModal"
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('title');
   const [showFilters, setShowFilters] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [activeTechFilter, setActiveTechFilter] = useState(null);
 
   const projects = [
     {
       id: 1,
       title: "LiDAR Point Cloud Processing",
+      slug: "lidar-point-cloud-processing",
       category: "lidar",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "PCL", "CloudCompare", "PDAL"],
+      thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: [
+        { name: "Python", icon: "🐍" },
+        { name: "PCL", icon: "☁️" },
+        { name: "CloudCompare", icon: "📊" },
+        { name: "PDAL", icon: "🗺️" }
+      ],
       description: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
+      shortDescription: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
+      fullDescription: "Developed a comprehensive LiDAR point cloud processing pipeline that enables real-time 3D environmental mapping for autonomous vehicles. The system processes massive datasets efficiently, extracting meaningful features and terrain information crucial for navigation and obstacle detection.",
       status: "Completed",
       duration: "6 months",
+      completionDate: "March 2024",
       featured: true,
       githubUrl: "#",
-      demoUrl: "#"
+      demoUrl: "#",
+      liveUrl: "#",
+      features: [
+        "Real-time point cloud processing with sub-centimeter accuracy",
+        "Automatic object detection and classification",
+        "Terrain analysis and digital elevation model generation",
+        "Integration with existing mapping workflows"
+      ],
+      testimonial: {
+        quote: "The LiDAR processing solution transformed our autonomous vehicle development. The accuracy and speed exceeded our expectations.",
+        author: "Dr. Sarah Mitchell",
+        role: "Chief Technology Officer",
+        company: "AutoDrive Innovations",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      }
     },
     {
       id: 2,
       title: "Enterprise Web Application",
+      slug: "enterprise-web-application",
       category: "software-development",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "Node.js", "PostgreSQL", "Docker"],
+      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: [
+        { name: "React", icon: "⚛️" },
+        { name: "Node.js", icon: "🟢" },
+        { name: "PostgreSQL", icon: "🐘" },
+        { name: "Docker", icon: "🐳" }
+      ],
       description: "Full-stack enterprise application with real-time data processing and analytics dashboard",
+      shortDescription: "Full-stack enterprise application with real-time data processing and analytics",
+      fullDescription: "Built a scalable enterprise web application featuring real-time data processing, comprehensive analytics dashboards, and multi-tenant architecture. The platform handles millions of transactions daily while maintaining high performance and security standards.",
       status: "In Progress",
       duration: "8 months",
       featured: false,
       githubUrl: "#",
-      demoUrl: "#"
+      demoUrl: "#",
+      liveUrl: "#",
+      features: [
+        "Real-time analytics with WebSocket integration",
+        "Multi-tenant architecture with role-based access control",
+        "Microservices architecture for scalability",
+        "Automated CI/CD pipeline with Docker containers"
+      ]
     },
     {
       id: 3,
       title: "Mobile App Testing Suite",
+      slug: "mobile-app-testing-suite",
       category: "software-testing",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["Selenium", "Appium", "Jest", "Cypress"],
+      thumbnail: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: ["https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "Selenium", icon: "🌐" },
+        { name: "Appium", icon: "📱" },
+        { name: "Jest", icon: "🃏" },
+        { name: "Cypress", icon: "🌲" }
+      ],
       description: "Comprehensive automated testing framework for mobile applications across iOS and Android",
+      shortDescription: "Comprehensive automated testing framework for mobile applications",
+      fullDescription: "Comprehensive automated testing framework for mobile applications across iOS and Android",
       status: "Completed",
       duration: "4 months",
       featured: false,
       githubUrl: "#",
-      demoUrl: "#"
+      demoUrl: "#",
+      liveUrl: "#"
     },
     {
       id: 4,
       title: "Financial Data Analytics Platform",
+      slug: "financial-data-analytics",
       category: "data-analysis",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["Python", "Pandas", "TensorFlow", "Tableau"],
@@ -66,6 +131,7 @@ function Projects() {
     {
       id: 5,
       title: "3D Terrain Mapping System",
+      slug: "3d-terrain-mapping-system",
       category: "lidar",
       image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["LiDAR", "GIS", "Python", "QGIS"],
@@ -79,6 +145,7 @@ function Projects() {
     {
       id: 6,
       title: "E-commerce Platform Development",
+      slug: "ecommerce-platform-development",
       category: "software-development",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["React", "Next.js", "Stripe", "MongoDB"],
@@ -92,6 +159,7 @@ function Projects() {
     {
       id: 7,
       title: "API Testing Automation",
+      slug: "api-testing-automation",
       category: "software-testing",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["Postman", "Newman", "Jest", "REST Assured"],
@@ -105,6 +173,7 @@ function Projects() {
     {
       id: 8,
       title: "Healthcare Data Analytics",
+      slug: "healthcare-data-analytics",
       category: "data-analysis",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["R", "Python", "Power BI", "SQL"],
@@ -118,6 +187,7 @@ function Projects() {
     {
       id: 9,
       title: "Custom Software Development",
+      slug: "custom-software-development",
       category: "software-development",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
@@ -138,12 +208,35 @@ function Projects() {
     { key: 'data-analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'data-analysis').length }
   ];
 
+  // Enhance projects with default values if missing
+  const enhancedProjects = projects.map(project => ({
+    ...project,
+    thumbnail: project.thumbnail || project.image,
+    images: project.images || [project.image],
+    technologies: project.technologies.map(tech =>
+      typeof tech === 'string' ? { name: tech, icon: null } : tech
+    ),
+    shortDescription: project.shortDescription || project.description,
+    fullDescription: project.fullDescription || project.description,
+    liveUrl: project.liveUrl || project.demoUrl
+  }));
+
   const filteredProjects = useMemo(() => {
-    let filtered = projects;
+    let filtered = enhancedProjects;
 
     // Filter by category
     if (activeFilter !== 'all') {
       filtered = filtered.filter(project => project.category === activeFilter);
+    }
+
+    // Filter by technology
+    if (activeTechFilter) {
+      filtered = filtered.filter(project =>
+        project.technologies.some(tech => {
+          const techName = typeof tech === 'string' ? tech : tech.name;
+          return techName.toLowerCase() === activeTechFilter.toLowerCase();
+        })
+      );
     }
 
     // Filter by search term
@@ -151,7 +244,10 @@ function Projects() {
       filtered = filtered.filter(project =>
         project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
+        project.technologies.some(tech => {
+          const techName = typeof tech === 'string' ? tech : tech.name;
+          return techName.toLowerCase().includes(searchTerm.toLowerCase());
+        })
       );
     }
 
@@ -170,7 +266,7 @@ function Projects() {
     });
 
     return filtered;
-  }, [activeFilter, searchTerm, sortBy]);
+  }, [activeFilter, searchTerm, sortBy, activeTechFilter]);
 
   const getStatusColor = (status) => {
     return status === 'Completed' ? 'bg-green-100 text-green-800 border-green-200' : 'bg-blue-100 text-blue-800 border-blue-200';
@@ -211,12 +307,14 @@ function Projects() {
     }, [index, project.id]);
 
     return (
-      <div
+      <Link
+        to={`/projects/${project.slug}`}
         id={`project-${project.id}`}
-        className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl group relative transition-all duration-300 ${
+        className={`block bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl hover:scale-105 group relative transition-all duration-300 no-underline ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
         }`}
         style={{ transitionDuration: '800ms' }}
+        onClick={() => window.scrollTo(0, 0)}
       >
         <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
           <img
@@ -252,15 +350,29 @@ function Projects() {
             {project.description}
           </p>
 
+          {/* Interactive Technology Tags */}
           <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4">
-            {project.technologies.slice(0, 3).map((tech, techIndex) => (
-              <span
-                key={techIndex}
-                className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-md font-medium"
-              >
-                {tech}
-              </span>
-            ))}
+            {project.technologies.slice(0, 3).map((tech, techIndex) => {
+              const techName = typeof tech === 'string' ? tech : tech.name;
+              const isActive = activeTechFilter === techName;
+              return (
+                <button
+                  key={techIndex}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveTechFilter(isActive ? null : techName);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className={`px-2 py-1 text-xs rounded-md font-medium transition-all duration-200 hover:scale-110 ${
+                    isActive
+                      ? 'bg-red-500 text-white shadow-md'
+                      : 'bg-gray-100 text-gray-700 hover:bg-red-100 hover:text-red-600'
+                  }`}
+                >
+                  {techName}
+                </button>
+              );
+            })}
             {project.technologies.length > 3 && (
               <span className="px-2 py-1 bg-gray-50 text-gray-500 text-xs rounded-md">
                 +{project.technologies.length - 3}
@@ -268,22 +380,16 @@ function Projects() {
             )}
           </div>
 
-          <div className="mb-4 sm:mb-6">
-            <div className="text-sm text-gray-500">
-              Duration: {project.duration}
-            </div>
-          </div>
-
           <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:translate-y-0 translate-y-2">
-            <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 relative pr-14">
+            <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-full font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 relative pr-14">
               <span>See more</span>
               <div className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/20 rounded-full flex items-center justify-center text-sm transition-transform duration-500 group-hover:rotate-[-45deg]">
                 →
               </div>
-            </button>
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     );
   };
 
@@ -388,6 +494,23 @@ function Projects() {
       {/* Projects Grid */}
       <section className="py-12 sm:py-16">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12">
+          {/* Active Filter Badge */}
+          {activeTechFilter && (
+            <div className="mb-6 flex items-center gap-3 animate-fade-in">
+              <span className="text-sm text-gray-600">Filtering by:</span>
+              <div className="flex items-center gap-2 px-4 py-2 bg-red-100 text-red-700 rounded-full font-medium text-sm">
+                <Tag className="w-4 h-4" />
+                {activeTechFilter}
+                <button
+                  onClick={() => setActiveTechFilter(null)}
+                  className="ml-2 hover:bg-red-200 rounded-full p-1 transition-colors"
+                >
+                  <span className="text-xs">✕</span>
+                </button>
+              </div>
+            </div>
+          )}
+
           <div className="mb-6 sm:mb-8 flex justify-between items-center">
             <p className="text-gray-600 text-sm sm:text-base">
               Showing {filteredProjects.length} of {projects.length} projects
@@ -450,6 +573,14 @@ function Projects() {
       </section>
 
       <Footer/>
+
+      {/* Project Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </div>
   )
 }
