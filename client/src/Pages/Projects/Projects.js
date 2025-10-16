@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, Search, Calendar, User, Tag, ExternalLink } from 'lucide-react'
+import { ChevronDown, Search, User, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
 import ProjectModal from "../../Components/ProjectModal"

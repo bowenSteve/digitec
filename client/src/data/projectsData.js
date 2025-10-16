@@ -85,9 +85,7 @@ export const projectsData = {
       title: "Project Outcomes",
       results: [
         { label: "Processing Speed", value: "5M+ points/sec" },
-        { label: "Accuracy", value: "< 2cm error" },
-        { label: "Project Duration", value: "6 months" },
-        { label: "Status", value: "Completed" }
+        { label: "Accuracy", value: "< 2cm error" }
       ],
       testimonial: {
         quote: "The LiDAR processing system exceeded our expectations in both accuracy and performance. It's now a critical component of our autonomous navigation stack.",
@@ -185,9 +183,7 @@ export const projectsData = {
       title: "Project Outcomes",
       results: [
         { label: "Users Supported", value: "10,000+ concurrent" },
-        { label: "Uptime", value: "99.9%" },
-        { label: "Project Duration", value: "8 months" },
-        { label: "Status", value: "In Production" }
+        { label: "Uptime", value: "99.9%" }
       ],
       testimonial: {
         quote: "The application has transformed how we manage our operations. The real-time analytics alone have saved us countless hours of manual reporting.",
@@ -285,9 +281,7 @@ export const projectsData = {
       title: "Project Outcomes",
       results: [
         { label: "Test Coverage", value: "95%+" },
-        { label: "Execution Time", value: "< 30 mins" },
-        { label: "Project Duration", value: "4 months" },
-        { label: "Status", value: "Completed" }
+        { label: "Execution Time", value: "< 30 mins" }
       ],
       testimonial: {
         quote: "This testing suite has been a game-changer for our mobile app quality. We've reduced bugs in production by 80% since implementation.",
@@ -385,13 +379,213 @@ export const projectsData = {
       title: "Project Outcomes",
       results: [
         { label: "Prediction Accuracy", value: "87%" },
-        { label: "Data Sources", value: "15+ integrated" },
-        { label: "Project Duration", value: "5 months" },
-        { label: "Status", value: "Completed" }
+        { label: "Data Sources", value: "15+ integrated" }
       ],
       testimonial: {
         quote: "The analytics platform has revolutionized our investment decision-making process. The predictive models have been remarkably accurate.",
         author: "Head of Quantitative Analysis"
+      }
+    }
+  },
+
+  '3d-terrain-mapping-system': {
+    hero: {
+      category: "LIDAR PROJECT",
+      title: "3D Terrain Mapping",
+      subtitle: "System",
+      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "LiDAR, GIS, Python, QGIS",
+      keyFeatures: "Aerial mapping, High precision, Construction planning",
+      description: "High-precision terrain mapping using aerial LiDAR data for construction planning and environmental analysis. This system provides accurate topographical data for large-scale infrastructure projects."
+    },
+    industries: [
+      { name: "Construction", icon: "HardHat" },
+      { name: "Infrastructure", icon: "Building2" },
+      { name: "Environmental", icon: "Leaf" }
+    ],
+    features: [
+      { icon: "Map", title: "Aerial Mapping", description: "Capture detailed terrain data from aerial LiDAR sensors covering large areas efficiently." },
+      { icon: "Ruler", title: "High Precision", description: "Achieve centimeter-level accuracy for construction and planning applications." }
+    ],
+    process: {
+      title: "Development Process",
+      description: "Systematic approach to terrain mapping and analysis.",
+      steps: [
+        { number: "01", icon: "Target", title: "Data Acquisition", description: "Aerial LiDAR scanning of target area." },
+        { number: "02", icon: "Code", title: "Processing", description: "Point cloud processing and terrain model generation." }
+      ]
+    },
+    outcomes: {
+      title: "Project Outcomes",
+      results: [
+        { label: "Accuracy", value: "< 5cm" },
+        { label: "Area Covered", value: "500+ hectares" }
+      ],
+      testimonial: {
+        quote: "Exceptional precision and detail for our construction planning needs.",
+        author: "Project Manager, Construction Firm"
+      }
+    }
+  },
+
+  'ecommerce-platform-development': {
+    hero: {
+      category: "SOFTWARE DEVELOPMENT",
+      title: "E-commerce Platform",
+      subtitle: "Development",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "React, Next.js, Stripe, MongoDB",
+      keyFeatures: "Payment integration, Product management, Order tracking",
+      description: "Modern e-commerce platform with advanced product management and payment processing capabilities."
+    },
+    industries: [
+      { name: "Retail", icon: "ShoppingCart" },
+      { name: "E-commerce", icon: "Store" }
+    ],
+    features: [
+      { icon: "CreditCard", title: "Payment Integration", description: "Secure payment processing with Stripe integration." },
+      { icon: "Package", title: "Product Management", description: "Comprehensive product catalog and inventory management." }
+    ],
+    process: {
+      title: "Development Process",
+      steps: [
+        { number: "01", icon: "Pencil", title: "Design", description: "UI/UX design for seamless shopping experience." },
+        { number: "02", icon: "Code", title: "Development", description: "Full-stack development with modern technologies." }
+      ]
+    },
+    outcomes: {
+      results: [
+        { label: "Conversion Rate", value: "12%" },
+        { label: "Page Load", value: "< 2s" }
+      ],
+      testimonial: {
+        quote: "Our sales increased by 40% after launching this platform.",
+        author: "CEO, Retail Company"
+      }
+    }
+  },
+
+  'api-testing-automation': {
+    hero: {
+      category: "SOFTWARE TESTING",
+      title: "API Testing",
+      subtitle: "Automation",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "Postman, Newman, Jest, REST Assured",
+      keyFeatures: "Automated validation, Performance testing, CI/CD integration",
+      description: "Comprehensive API testing framework with automated validation and performance testing."
+    },
+    industries: [
+      { name: "Software Testing", icon: "TestTube" },
+      { name: "Quality Assurance", icon: "CheckCircle" }
+    ],
+    features: [
+      { icon: "Zap", title: "Automated Testing", description: "Fully automated API testing with continuous integration." }
+    ],
+    process: {
+      steps: [
+        { number: "01", icon: "Code", title: "Test Creation", description: "Develop comprehensive test suites." }
+      ]
+    },
+    outcomes: {
+      results: [
+        { label: "Test Coverage", value: "98%" },
+        { label: "Bugs Detected", value: "150+" }
+      ],
+      testimonial: {
+        quote: "Significantly improved our API reliability.",
+        author: "QA Lead"
+      }
+    }
+  },
+
+  'healthcare-data-analytics': {
+    hero: {
+      category: "DATA ANALYTICS",
+      title: "Healthcare Data",
+      subtitle: "Analytics",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "R, Python, Power BI, SQL",
+      keyFeatures: "Patient outcome prediction, Hospital efficiency analysis",
+      description: "Patient outcome prediction and hospital efficiency analysis using machine learning."
+    },
+    industries: [
+      { name: "Healthcare", icon: "Heart" },
+      { name: "Medical", icon: "Activity" }
+    ],
+    features: [
+      { icon: "TrendingUp", title: "Predictive Analytics", description: "ML-powered patient outcome predictions." }
+    ],
+    process: {
+      steps: [
+        { number: "01", icon: "Database", title: "Data Collection", description: "Gather patient and hospital data." }
+      ]
+    },
+    outcomes: {
+      results: [
+        { label: "Prediction Accuracy", value: "91%" },
+        { label: "Efficiency Gain", value: "25%" }
+      ],
+      testimonial: {
+        quote: "Transformed our patient care approach.",
+        author: "Hospital Director"
+      }
+    }
+  },
+
+  'custom-software-development': {
+    hero: {
+      category: "SOFTWARE DEVELOPMENT",
+      title: "Custom Software",
+      subtitle: "Development",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "Vue.js, Laravel, MySQL, AWS",
+      keyFeatures: "Custom workflows, Business automation, Cloud hosting",
+      description: "Tailored software solutions designed to meet specific business requirements and optimize workflows."
+    },
+    industries: [
+      { name: "Enterprise", icon: "Building" },
+      { name: "Business", icon: "Briefcase" }
+    ],
+    features: [
+      { icon: "Settings", title: "Custom Workflows", description: "Tailored to your specific business processes." }
+    ],
+    process: {
+      steps: [
+        { number: "01", icon: "Users", title: "Requirements", description: "Understand business needs." }
+      ]
+    },
+    outcomes: {
+      results: [
+        { label: "Time Saved", value: "40%" },
+        { label: "ROI", value: "300%" }
+      ],
+      testimonial: {
+        quote: "Perfect solution for our unique needs.",
+        author: "Business Owner"
       }
     }
   }
