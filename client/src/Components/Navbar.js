@@ -7,7 +7,8 @@ const Navbar = () => {
   // Check if current page has white background (requires different styling)
   const isWhiteBackgroundPage = window.location.pathname === '/contact' ||
                                window.location.pathname.includes('/services/') ||
-                               /^\/solutions\/[^/]+$/.test(window.location.pathname);
+                               /^\/solutions\/[^/]+$/.test(window.location.pathname) ||
+                               /^\/projects\/[^/]+$/.test(window.location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -24,13 +24,13 @@ const ProjectTile = ({ project, onClick }) => {
         isHovered ? 'transform scale-105 shadow-2xl' : ''
       }`}
       style={{
-        width: '280px',
-        height: '380px',
+        width: '240px',
+        height: '320px',
         position: 'relative'
       }}
     >
       {/* Project Image */}
-      <div className="relative h-[180px] overflow-hidden bg-gray-100">
+      <div className="relative h-[150px] overflow-hidden bg-gray-100">
         <img
           src={project.image}
           alt={project.title}
@@ -56,14 +56,14 @@ const ProjectTile = ({ project, onClick }) => {
       </div>
 
       {/* Content */}
-      <div className="p-4">
+      <div className="p-3">
         {/* Title */}
-        <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 leading-tight">
+        <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-2 leading-tight">
           {project.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm text-gray-600 mb-3 line-clamp-3 leading-relaxed">
+        <p className="text-xs text-gray-600 mb-2 line-clamp-2 leading-relaxed">
           {project.description}
         </p>
 

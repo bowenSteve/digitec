@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { X, ExternalLink, Github, Calendar, Clock, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 const ProjectModal = ({ project, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -133,39 +133,17 @@ const ProjectModal = ({ project, onClose }) => {
               </div>
             </div>
 
-            {/* Project Timeline */}
+            {/* Project Status */}
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Timeline</h3>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-gray-700">
-                  <div className="p-2 bg-gray-100 rounded-lg">
-                    <Calendar className="w-5 h-5 text-gray-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Duration</p>
-                    <p className="font-medium">{project.duration}</p>
-                  </div>
-                </div>
-                {project.completionDate && (
-                  <div className="flex items-center gap-3 text-gray-700">
-                    <div className="p-2 bg-gray-100 rounded-lg">
-                      <Clock className="w-5 h-5 text-gray-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Completed</p>
-                      <p className="font-medium">{project.completionDate}</p>
-                    </div>
-                  </div>
-                )}
-                <div className="flex items-center gap-3">
-                  <span className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                    project.status === 'Completed'
-                      ? 'bg-green-100 text-green-800'
-                      : 'bg-blue-100 text-blue-800'
-                  }`}>
-                    {project.status}
-                  </span>
-                </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Status</h3>
+              <div className="flex items-center gap-3">
+                <span className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                  project.status === 'Completed'
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-blue-100 text-blue-800'
+                }`}>
+                  {project.status}
+                </span>
               </div>
             </div>
           </div>
@@ -215,31 +193,6 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
           )}
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-200">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-md hover:shadow-lg"
-              >
-                <ExternalLink className="w-5 h-5" />
-                View Live Demo
-              </a>
-            )}
-            {project.githubUrl && (
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
-              >
-                <Github className="w-5 h-5" />
-                View Repository
-              </a>
-            )}
-          </div>
         </div>
       </div>
 
