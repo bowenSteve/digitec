@@ -10,6 +10,7 @@ const Services = () => {
       letter: "D",
       category: "DATA RESEARCH",
       title: "Data Collection & Research",
+      slug: "data-collection-research",
       backgroundImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["web research", "lead generation", "market analysis"],
       description: "Comprehensive data collection from multiple sources with expert research methodologies to support your business intelligence needs."
@@ -18,6 +19,7 @@ const Services = () => {
       letter: "A",
       category: "AI TRAINING",
       title: "AI Model Training & Annotation",
+      slug: "ai-model-training-annotation",
       backgroundImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["machine learning", "data labeling", "model training"],
       description: "Professional data annotation and labeling services to train high-performance AI models with precision and accuracy."
@@ -26,6 +28,7 @@ const Services = () => {
       letter: "B",
       category: "INTELLIGENCE",
       title: "Business Intelligence Dashboards",
+      slug: "business-intelligence-dashboards",
       backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["visualization", "analytics", "reporting"],
       description: "Custom dashboard creation that transforms complex data into actionable insights for strategic business decisions."
@@ -34,15 +37,17 @@ const Services = () => {
       letter: "D",
       category: "DIGITIZATION",
       title: "Document Digitization",
+      slug: "document-digitization",
       backgroundImage: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["scanning", "ocr", "data entry"],
       description: "Convert physical documents into searchable digital formats with high accuracy and secure processing workflows."
     },
     {
       letter: "W",
-      category: "AUTOMATION", 
+      category: "AUTOMATION",
       title: "Workflow Automation",
-      backgroundImage: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      slug: "workflow-automation",
+      backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["process automation", "efficiency", "optimization"],
       description: "Streamline business processes through intelligent automation solutions that reduce manual work and increase productivity."
     },
@@ -50,6 +55,7 @@ const Services = () => {
       letter: "Q",
       category: "QUALITY",
       title: "Quality Assurance & Validation",
+      slug: "quality-assurance-validation",
       backgroundImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["validation", "testing", "compliance"],
       description: "Rigorous quality control processes ensuring data accuracy, compliance, and reliability across all deliverables."
@@ -58,6 +64,7 @@ const Services = () => {
       letter: "C",
       category: "MANAGEMENT",
       title: "CRM & Database Management",
+      slug: "crm-database-management",
       backgroundImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["database", "crm", "maintenance"],
       description: "Professional database administration and CRM management to keep your customer data organized and accessible."
@@ -66,6 +73,7 @@ const Services = () => {
       letter: "S",
       category: "INSIGHTS",
       title: "Strategic Data Insights",
+      slug: "strategic-data-insights",
       backgroundImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tags: ["strategy", "analysis", "consulting"],
       description: "Expert analysis and strategic recommendations based on comprehensive data interpretation and market trends."
@@ -122,11 +130,15 @@ const Services = () => {
           {/* Mobile Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="h-[400px] shadow-lg relative p-4 rounded-lg border border-gray-200 bg-white hover:shadow-xl transition-all duration-300 cursor-pointer select-none"
                 onMouseEnter={() => setHoveredCard(index)}
                 onMouseLeave={() => setHoveredCard(null)}
+                onClick={() => {
+                  navigate(`/services/${service.slug}`);
+                  window.scrollTo(0, 0);
+                }}
               >
                 {/* Mobile Header */}
                 <div className="flex flex-row justify-between mb-4">
@@ -242,11 +254,15 @@ const Services = () => {
           <div className="w-2/3">
             <div className="grid grid-cols-2 gap-8">
               {services.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="h-[480px] lg:h-[540px] shadow-custom relative p-5 rounded-md border border-gray border-opacity-10 bg-white group hover:shadow-lg hover:border-white duration-100 cursor-pointer select-none"
                   onMouseEnter={() => setHoveredCard(index)}
                   onMouseLeave={() => setHoveredCard(null)}
+                  onClick={() => {
+                    navigate(`/services/${service.slug}`);
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   {/* Header with large letter and category */}
                   <div className="flex flex-row justify-between mb-6 lg:mb-8">

@@ -6,8 +6,9 @@ const Navbar = () => {
 
   // Check if current page has white background (requires different styling)
   const isWhiteBackgroundPage = window.location.pathname === '/contact' ||
-                               window.location.pathname === '/services' ||
-                               window.location.pathname.includes('/services');
+                               window.location.pathname.includes('/services/') ||
+                               /^\/solutions\/[^/]+$/.test(window.location.pathname) ||
+                               /^\/projects\/[^/]+$/.test(window.location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,9 +21,9 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'SERVICES', href: '/services' },
-    { name: 'INDUSTRIES', href: '#industries' },
+    // { name: 'INDUSTRIES', href: '/industries' },
     { name: 'SOLUTIONS', href: '/solutions' },
-    { name: 'RESOURCES', href: '#resources' },
+    // { name: 'RESOURCES', href: '/resources' },
     { name: 'PROJECTS', href: '/projects' },
     { name: 'ABOUT', href: '/about' }
   ];

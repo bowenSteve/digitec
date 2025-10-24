@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,36 +8,36 @@ const Footer = () => {
     {
       title: 'SOLUTIONS',
       links: [
-        { name: 'Computer Vision', href: '#computer-vision' },
-        { name: 'Natural Language Processing', href: '#nlp' },
-        { name: 'Generative AI', href: '#generative-ai' },
-        { name: 'Data & Content Services', href: '#data-services' }
+        { name: 'Computer Vision', href: '/solutions/computer-vision' },
+        { name: 'Natural Language Processing', href: '/solutions/natural-language-processing' },
+        { name: 'Generative AI', href: '/solutions/generative-ai' },
+        { name: 'Data & Content Services', href: '/solutions/data-content-services' }
       ]
     },
     {
-      title: 'INDUSTRIES',
+      title: 'SERVICES',
       links: [
-        { name: 'Technology', href: '#technology' },
-        { name: 'Healthcare', href: '#healthcare' },
-        { name: 'Automotive', href: '#automotive' },
-        { name: 'Financial Services', href: '#finance' }
+        { name: 'Website Creation', href: '/services/website-creation' },
+        { name: 'Search Engine Optimization', href: '/services/search-engine-optimization' },
+        { name: 'Branding & Visual Design', href: '/services/branding-visual-design' },
+        { name: 'Web Development', href: '/services/web-development' }
       ]
     },
-    {
-      title: 'RESOURCES',
-      links: [
-        { name: 'Content Library', href: '#content' },
-        { name: 'Blog', href: '#blog' },
-        { name: 'Case Studies', href: '#case-studies' },
-        { name: 'Events', href: '#events' }
-      ]
-    },
+    // {
+    //   title: 'RESOURCES',
+    //   links: [
+    //     { name: 'Content Library', href: '/resources' },
+    //     { name: 'Blog', href: '/resources' },
+    //     { name: 'Case Studies', href: '/resources' },
+    //     { name: 'Events', href: '/resources' }
+    //   ]
+    // },
     {
       title: 'ABOUT',
       links: [
-        { name: 'Company', href: '#company' },
-        { name: 'Careers', href: '#careers' },
-        { name: 'Impact', href: '#impact' },
+        { name: 'Company', href: '/about' },
+        // { name: 'Careers', href: '#careers' },
+        // { name: 'Impact', href: '#impact' },
         { name: 'Contact', href: '/contact' }
       ]
     }
@@ -45,7 +46,7 @@ const Footer = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      href: '#linkedin',
+      href: 'https://www.linkedin.com/company/infobridge-niatech',
       icon: (
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
           <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
@@ -156,15 +157,15 @@ const Footer = () => {
                 Copyright ©{currentYear} InfoBridge NiaTech | All Rights Reserved
               </div>
               <div className="flex space-x-6 text-sm">
-                <a href="#terms" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                <Link to="/terms-of-use" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Terms of Use
-                </a>
-                <a href="#privacy" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                </Link>
+                <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Privacy Policy
-                </a>
-                <a href="#cookies" className="text-gray-500 hover:text-green-400 transition-colors duration-300">
+                </Link>
+                <Link to="/cookie-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-500 hover:text-green-400 transition-colors duration-300">
                   Cookie Policy
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -66,27 +66,6 @@ const WhyUs = () => {
                 </p>
               </div>
 
-              {/* CTA Button */}
-              <div className="inline-block mt-10">
-                <div className="flex space-x-4 justify-center md:justify-start">
-                  <button className="group relative h-[185px] w-[185px] rounded-full bg-white border-2 border-red-500 text-lg font-medium hover:bg-red-500 hover:text-white transition-all duration-300">
-                    <span className="absolute top-16 left-8 w-20 text-center">
-                      <span className="font-normal">See our</span>
-                      <br />
-                      <span className="font-bold">services</span>
-                    </span>
-                    <svg 
-                      className="absolute w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" 
-                      style={{ transform: 'rotate(-45deg)', top: '40%', right: '15%' }}
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 11v2h12l-5.5 5.5l1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5L16 11z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
 

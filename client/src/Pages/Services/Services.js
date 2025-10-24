@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
 import './Services.css'
@@ -9,6 +10,7 @@ const servicesData = [
     letter: 'W',
     category: 'Website',
     title: { normal: 'Website', bold: 'Creation' },
+    slug: 'website-creation',
     tags: ['showcase', 'e-commerce', 'wordpress', 'ux/ui design', 'website revamp', 'responsive design'],
     description: 'Build your web project with a committed digital partner. Our websites combine design, performance, and adaptability across all devices for a smooth and optimized experience that propels your business forward.',
     bgImage: 'url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -18,6 +20,7 @@ const servicesData = [
     letter: 'S',
     category: 'SEO',
     title: { normal: 'Search', bold: 'Engine Optimization' },
+    slug: 'search-engine-optimization',
     tags: ['keywords', 'ranking', 'meta link', 'google analytics', 'organic traffic', 'audit seo'],
     description: 'Improving your search engine rankings helps attract qualified, long-lasting traffic. Our advanced Search Engine Optimization expertise ensures we refine your positioning with precision.',
     bgImage: 'url("/images/qreative-seo-google-01-sm.avif")',
@@ -27,6 +30,7 @@ const servicesData = [
     letter: 'B',
     category: 'Branding',
     title: { normal: 'Branding', bold: '& Visual Design' },
+    slug: 'branding-visual-design',
     tags: ['branding', 'design', 'graphism', 'guidelines', 'logo', 'font'],
     description: 'Creating a strong, coherent, and memorable visual identity that reflects the essence of your brand is essential. An original, solid, and impactful visual style allows your business to stand out durably from the competition.',
     bgImage: 'url("https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -36,6 +40,7 @@ const servicesData = [
     letter: 'S',
     category: 'SEA',
     title: { normal: 'Paid', bold: 'Search (SEA)' },
+    slug: 'paid-search-sea',
     tags: ['google ads', 'ads', 'facebook ads', 'campaign', 'web marketing', 'performance'],
     description: 'Boost your online visibility fast with targeted ad campaigns managed by specialists on Google, Facebook, LinkedIn, and other platforms.',
     bgImage: 'url("https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -45,6 +50,7 @@ const servicesData = [
     letter: 'N',
     category: 'Networking',
     title: { normal: 'Social', bold: 'Media Management' },
+    slug: 'social-media-management',
     tags: ['linkedin', 'facebook', 'instagram', 'community management', 'tiktok', 'online visibility'],
     description: 'Growing and engaging a community requires expert social media management. Content creation and distribution are designed to strengthen your brand image and boost public interaction.',
     bgImage: 'url("https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -54,6 +60,7 @@ const servicesData = [
     letter: 'D',
     category: 'Digital Strategy',
     title: { normal: 'Digital', bold: 'Strategy' },
+    slug: 'digital-strategy',
     tags: ['ads', 'conversion', 'competition analysis', 'marketing digital', 'leads generation', 'marketing automation'],
     description: 'Benefit from a personalized roadmap covering all digital and communication channels, accelerating your online visibility and helping you reach your business goals.',
     bgImage: 'url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -63,6 +70,7 @@ const servicesData = [
     letter: 'C',
     category: 'Content',
     title: { normal: 'Website', bold: 'Content Updates' },
+    slug: 'website-content-updates',
     tags: ['copywriting', 'webmaster', 'articles', 'blogging', 'inbound marketing', 'web redaction'],
     description: 'Delivering optimized and relevant content is key to attracting and converting your audience. Our approach ensures your content stays fresh, visible, and on level with your brand\'s voice and goals.',
     bgImage: 'url("https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -72,6 +80,7 @@ const servicesData = [
     letter: 'H',
     category: 'Hosting',
     title: { normal: 'Domain', bold: '& Hosting Services' },
+    slug: 'domain-hosting-services',
     tags: ['security', 'cloud', 'dns', 'data protection', 'ssl certification'],
     description: 'We ensure daily, secure management of your domain name and website hosting. Our hosting solutions are as eco-friendly as possible.',
     bgImage: 'url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -81,6 +90,7 @@ const servicesData = [
     letter: 'M',
     category: 'Maintenance',
     title: { normal: 'Website', bold: 'Maintenance' },
+    slug: 'website-maintenance',
     tags: ['optimization', 'updates', 'backups', 'technical support', 'bug fixes', 'web monitoring'],
     description: 'Combine Peace of Mind and Longevity with Our Maintenance Service. Our agency ensures the security, updates, and continuous optimization of your web tools for flawless operation.',
     bgImage: 'url("https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -90,6 +100,7 @@ const servicesData = [
     letter: 'G',
     category: 'Graphism',
     title: { normal: 'Web', bold: 'Design & Print' },
+    slug: 'web-design-print',
     tags: ['wireframe', 'trends', 'ergonomics', 'mobile-friendly', 'web model', 'paper support'],
     description: 'We create custom logos, graphic designs, and web designs: unique, modern, and creative creations designed to enhance your brand and effectively communicate your messages to your target audience.',
     bgImage: 'url("https://images.unsplash.com/photo-1558655146-d09347e92766?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -99,6 +110,7 @@ const servicesData = [
     letter: 'D',
     category: 'Dev',
     title: { normal: 'Web', bold: 'Development' },
+    slug: 'web-development',
     tags: ['e-commerce', 'wordpress', 'full stack', 'front end', 'back end', 'cms', 'vuejs', 'api'],
     description: 'We implement high-performing, custom web solutions tailored to your specific needs, whether for complex Vue.js applications or advanced API integrations.',
     bgImage: 'url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -108,6 +120,7 @@ const servicesData = [
     letter: 'P',
     category: 'Photo',
     title: { normal: 'Photo', bold: '& Video Production' },
+    slug: 'photo-video-production',
     tags: ['photoshoot', 'corporate', 'events', 'visual storytelling', 'packshot', 'video editing'],
     description: 'Enhance your brand with professional photos and videos. Our agency can create visuals for you that capture attention and reinforce your message for maximum impact.',
     bgImage: 'url("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -117,6 +130,7 @@ const servicesData = [
     letter: 'A',
     category: 'Audit',
     title: { normal: 'Website', bold: 'Audit' },
+    slug: 'website-audit',
     tags: ['audit seo', 'optimization', 'performance', 'bug fixes', 'ergonomics'],
     description: 'Improve your site\'s performance with a comprehensive audit. We pinpoint weaknesses and unveil optimization levers to boost your visibility, user experience, and organic search performance.',
     bgImage: 'url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -126,6 +140,7 @@ const servicesData = [
     letter: 'W',
     category: 'Webdesign',
     title: { normal: 'Custom', bold: 'Web Design' },
+    slug: 'custom-web-design',
     tags: ['figma', 'ui-ux', 'wireframe', 'responsive design', 'website revamp'],
     description: 'Bring your visual identity to life with web design tailored to your users. Every interface is carefully crafted to combine aesthetics, usability, and performance across all devices.',
     bgImage: 'url("https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -135,6 +150,7 @@ const servicesData = [
     letter: 'L',
     category: 'Logo',
     title: { normal: 'Logo', bold: 'Design' },
+    slug: 'logo-design',
     tags: ['logo', 'graphism', 'branding', 'design'],
     description: 'A well-designed logo is more than just a graphic element—it\'s a promise, a reference point, and a tool for instant recognition. It embodies your brand, reflects your values, and gives your business a strong presence across all types of media.',
     bgImage: 'url("https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -144,6 +160,7 @@ const servicesData = [
     letter: 'G',
     category: 'Google',
     title: { normal: 'Google', bold: 'My Business' },
+    slug: 'google-my-business',
     tags: ['reviews', 'google', 'local', 'business-profile'],
     description: 'Boost your local visibility with an optimized Google My Business profile. We enhance your online image through complete, well-ranked, and up-to-date business listings.',
     bgImage: 'url("https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -153,6 +170,7 @@ const servicesData = [
     letter: 'P',
     category: 'Print',
     title: { normal: 'Print', bold: 'Design Services' },
+    slug: 'print-design-services',
     tags: ['design', 'illustrator', 'adobe', 'paper support', 'indesign', 'photoshop'],
     description: 'We design custom print communication materials and graphic creations for you: unique, impactful, and consistent visuals crafted to enhance your brand image and convey your message with clarity.',
     bgImage: 'url("https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -162,6 +180,7 @@ const servicesData = [
     letter: 'N',
     category: 'Newsletter',
     title: { normal: 'Newsletter', bold: '& Email Marketing' },
+    slug: 'newsletter-email-marketing',
     tags: ['emailing', 'leads', 'conversion', 'editorial-strategy', 'marketing automation', 'leads generation'],
     description: 'Engage your audience with impactful email campaigns. We create custom newsletters that build customer loyalty, boost conversions, and enhance your brand image.',
     bgImage: 'url("https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80")',
@@ -197,7 +216,8 @@ const ServiceCard = ({ service, index }) => {
   }, [index, service.id]);
 
   return (
-    <div
+    <Link
+      to={service.slug ? `/services/${service.slug}` : '#'}
       id={`service-${service.id}`}
       className={`service-card ${isVisible ? 'fade-in' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
@@ -249,12 +269,12 @@ const ServiceCard = ({ service, index }) => {
       </div>
 
       <div className={`service-button ${isHovered ? 'visible' : ''}`}>
-        <button className="see-more-btn">
+        <div className="see-more-btn">
           <span>See more</span>
           <div className="btn-arrow">→</div>
-        </button>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -265,45 +285,72 @@ function Services() {
 
       <main className="services-main">
         {/* Hero Section */}
-        <section className="hero-section">
-          <div className="hero-content">
-            <div className="hero-left">
-              <div className="hidden xl:block w-1/3 h-96 absolute -mx-20 bg-gradient left-10 dark:hidden"></div>
-              <div className="hero-decorative"></div>
-              <img
-                width="768"
-                height="802"
-                alt="Qreative web agency office in Nivelles"
-                crossOrigin="anonymous"
-                loading="eager"
-                sizes="50vw"
-                fetchPriority="high"
-                src="/images/qreative-services-cover-en-md.avif"
-                className="w-full h-96 absolute -mt-12 object-cover dark:opacity-80 imgServiceCover"
-              />
-            </div>
-            <div className="hero-right">
-              <div className="hero-header">
-                <div className="hero-dots">
-                  <span className="dot active"></span>
-                  <span className="dot"></span>
-                  <span className="dot"></span>
-                </div>
-                <hr />
-                <p className="hero-subtitle">WHAT WE OFFER</p>
-              </div>
-              <h1 className="hero-title">TAKE A LOOK</h1>
-              <div className="hero-description">
-                <p>
-                  Discover how our digital agency helps SMEs succeed in the digital world with concrete,
-                  accessible solutions tailored to your goals. From effective website creation to
-                  high-performing SEO, impactful visual identity, or a custom social media strategy —
-                  every service is designed to boost your growth. With us, digital becomes simple,
-                  human, and above all, a true source of opportunity for your business.
-                </p>
-              </div>
+        <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'}}>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-900/80 to-gray-900/70"></div>
+            {/* Grid Pattern Overlay */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute inset-0" style={{
+                backgroundImage: 'linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px)',
+                backgroundSize: '50px 50px'
+              }}></div>
             </div>
           </div>
+
+          {/* Content */}
+          <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <div className="mb-6 animate-fade-in">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="flex gap-2">
+                  <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                  <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                </div>
+              </div>
+              <span className="text-red-400 text-sm font-semibold uppercase tracking-wider">
+                WHAT WE OFFER
+              </span>
+            </div>
+
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight animate-slide-up">
+              Our Services
+              <br />
+              <span className="text-red-400">Driving Your Success</span>
+            </h1>
+
+            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto animate-slide-up-delayed">
+              Discover how our digital agency helps SMEs succeed in the digital world with concrete,
+              accessible solutions tailored to your goals. From effective website creation to
+              high-performing SEO, impactful visual identity, or a custom social media strategy —
+              every service is designed to boost your growth.
+            </p>
+          </div>
+
+          {/* Animated Blobs */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-red-400/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-red-400/10 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
+
+          {/* Animations */}
+          <style jsx>{`
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+            @keyframes slideUp {
+              from { opacity: 0; transform: translateY(30px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in {
+              animation: fadeIn 0.8s ease-out;
+            }
+            .animate-slide-up {
+              animation: slideUp 0.8s ease-out 0.2s both;
+            }
+            .animate-slide-up-delayed {
+              animation: slideUp 0.8s ease-out 0.4s both;
+            }
+          `}</style>
         </section>
 
         {/* Services Grid */}
@@ -339,10 +386,10 @@ function Services() {
                 Let's talk about your goals today!
               </p>
             </div>
-            <button className="cta-button">
+            <Link to="/contact" className="cta-button" onClick={() => window.scrollTo(0, 0)}>
               <span>Let's talk</span>
               <div className="btn-arrow">→</div>
-            </button>
+            </Link>
           </div>
         </section>
       </main>

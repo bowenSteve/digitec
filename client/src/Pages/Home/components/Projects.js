@@ -14,52 +14,190 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI Healthcare Analytics",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["data analysis", "machine learning", "healthcare"],
-      description: "Advanced medical data processing and patient outcome prediction models"
+      id: 1,
+      title: "LiDAR Point Cloud Processing",
+      slug: "lidar-point-cloud-processing",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: [
+        { name: "Python", icon: "🐍" },
+        { name: "PCL", icon: "☁️" },
+        { name: "CloudCompare", icon: "📊" },
+        { name: "PDAL", icon: "🗺️" }
+      ],
+      services: ["LiDAR", "3D Mapping", "Point Cloud"],
+      description: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
+      fullDescription: "Developed a comprehensive LiDAR point cloud processing pipeline that enables real-time 3D environmental mapping for autonomous vehicles. The system processes massive datasets efficiently, extracting meaningful features and terrain information crucial for navigation and obstacle detection.",
+      status: "Completed",
+      duration: "6 months",
+      completionDate: "March 2024",
+      features: [
+        "Real-time point cloud processing with sub-centimeter accuracy",
+        "Automatic object detection and classification",
+        "Terrain analysis and digital elevation model generation",
+        "Integration with existing mapping workflows"
+      ],
+      testimonial: {
+        quote: "The LiDAR processing solution transformed our autonomous vehicle development. The accuracy and speed exceeded our expectations.",
+        author: "Dr. Sarah Mitchell",
+        role: "Chief Technology Officer",
+        company: "AutoDrive Innovations",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      },
+      githubUrl: "#",
+      demoUrl: "#",
+      liveUrl: "#"
     },
     {
-      title: "Financial Risk Assessment",
+      id: 2,
+      title: "Enterprise Web Application",
+      slug: "enterprise-web-application",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: [
+        { name: "React", icon: "⚛️" },
+        { name: "Node.js", icon: "🟢" },
+        { name: "PostgreSQL", icon: "🐘" },
+        { name: "Docker", icon: "🐳" }
+      ],
+      services: ["Web Development", "Real-time Analytics", "Cloud"],
+      description: "Full-stack enterprise application with real-time data processing and analytics dashboard",
+      fullDescription: "Built a scalable enterprise web application featuring real-time data processing, comprehensive analytics dashboards, and multi-tenant architecture. The platform handles millions of transactions daily while maintaining high performance and security standards.",
+      status: "In Progress",
+      duration: "8 months",
+      features: [
+        "Real-time analytics with WebSocket integration",
+        "Multi-tenant architecture with role-based access control",
+        "Microservices architecture for scalability",
+        "Automated CI/CD pipeline with Docker containers"
+      ],
+      githubUrl: "#",
+      demoUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      id: 3,
+      title: "Mobile App Testing Suite",
+      slug: "mobile-app-testing-suite",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: ["https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "Selenium", icon: "🌐" },
+        { name: "Appium", icon: "📱" },
+        { name: "Jest", icon: "🃏" },
+        { name: "Cypress", icon: "🌲" }
+      ],
+      services: ["Testing", "QA Automation", "Mobile"],
+      description: "Comprehensive automated testing framework for mobile applications across iOS and Android",
+      fullDescription: "Comprehensive automated testing framework for mobile applications across iOS and Android",
+      status: "Completed",
+      duration: "4 months",
+      githubUrl: "#",
+      demoUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      id: 4,
+      title: "Financial Data Analytics Platform",
+      slug: "financial-data-analytics",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["data processing", "risk analysis", "automation"],
-      description: "Automated risk scoring and fraud detection for financial institutions"
+      images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "Python", icon: "🐍" },
+        { name: "Pandas", icon: "🐼" },
+        { name: "TensorFlow", icon: "🧠" },
+        { name: "Tableau", icon: "📊" }
+      ],
+      services: ["Data Analysis", "Predictive Analytics", "Finance"],
+      description: "Advanced financial data processing and predictive analytics for investment decisions",
+      status: "Completed",
+      duration: "5 months",
+      githubUrl: "#",
+      demoUrl: "#"
     },
     {
-      title: "E-commerce Intelligence",
+      id: 5,
+      title: "3D Terrain Mapping System",
+      slug: "3d-terrain-mapping-system",
+      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: ["https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "LiDAR", icon: "🗺️" },
+        { name: "GIS", icon: "🌍" },
+        { name: "Python", icon: "🐍" },
+        { name: "QGIS", icon: "📍" }
+      ],
+      services: ["LiDAR", "Mapping", "Construction"],
+      description: "High-precision terrain mapping using aerial LiDAR data for construction planning",
+      status: "In Progress",
+      duration: "7 months",
+      githubUrl: "#",
+      demoUrl: "#"
+    },
+    {
+      id: 6,
+      title: "E-commerce Platform Development",
+      slug: "ecommerce-platform-development",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["data collection", "market research", "analytics"],
-      description: "Customer behavior analysis and inventory optimization systems"
+      images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "React", icon: "⚛️" },
+        { name: "Next.js", icon: "▲" },
+        { name: "Stripe", icon: "💳" },
+        { name: "MongoDB", icon: "🍃" }
+      ],
+      services: ["E-commerce", "Payments", "Web Development"],
+      description: "Modern e-commerce platform with advanced product management and payment processing",
+      status: "Completed",
+      duration: "6 months",
+      githubUrl: "#",
+      demoUrl: "#"
     },
     {
-      title: "Manufacturing Optimization",
-      image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["process automation", "quality control", "data visualization"],
-      description: "Smart factory data integration and production efficiency analytics"
+      id: 7,
+      title: "Healthcare Data Analytics",
+      slug: "healthcare-data-analytics",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "R", icon: "📊" },
+        { name: "Python", icon: "🐍" },
+        { name: "Power BI", icon: "📈" },
+        { name: "SQL", icon: "🗄️" }
+      ],
+      services: ["Healthcare", "Machine Learning", "Analytics"],
+      description: "Patient outcome prediction and hospital efficiency analysis using machine learning",
+      status: "In Progress",
+      duration: "9 months",
+      githubUrl: "#",
+      demoUrl: "#"
     },
     {
-      title: "Transportation Logistics",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["route optimization", "data tracking", "predictive analysis"],
-      description: "Fleet management and delivery route optimization platform"
-    },
-    {
-      title: "Energy Grid Management",
-      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["smart grid", "data monitoring", "renewable energy"],
-      description: "Real-time energy consumption monitoring and grid optimization"
-    },
-    {
-      title: "Agricultural Intelligence",
-      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["crop monitoring", "data analysis", "precision farming"],
-      description: "Satellite imagery analysis for crop yield prediction and optimization"
-    },
-    {
-      title: "Smart City Infrastructure",
-      image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      services: ["urban planning", "data integration", "IoT analytics"],
-      description: "Comprehensive urban data platform for city planning and management"
+      id: 8,
+      title: "Custom Software Development",
+      slug: "custom-software-development",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: ["https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
+      technologies: [
+        { name: "Vue.js", icon: "💚" },
+        { name: "Laravel", icon: "🔷" },
+        { name: "MySQL", icon: "🐬" },
+        { name: "AWS", icon: "☁️" }
+      ],
+      services: ["Custom Development", "Workflow Automation", "Cloud"],
+      description: "Tailored software solutions designed to meet specific business requirements and optimize workflows",
+      status: "Completed",
+      duration: "10 months",
+      githubUrl: "#",
+      demoUrl: "#"
     }
   ];
 
@@ -154,16 +292,27 @@ const Projects = () => {
         cursor: isHoveringProjects ? 'none' : 'default' 
       }}
     >
-      {/* Custom Cursor Circle */}
+      {/* Custom Cursor */}
       {isHoveringProjects && (
         <div
-          className="fixed pointer-events-none z-50 w-16 h-16 border-2 border-red-500 rounded-full mix-blend-difference"
+          className="fixed w-24 h-24 pointer-events-none z-50"
           style={{
-            left: cursorPos.x - 32,
-            top: cursorPos.y - 32,
-            transition: 'transform 0.1s ease-out'
+            left: `${cursorPos.x}px`,
+            top: `${cursorPos.y}px`,
+            transform: 'translate(-50%, -50%)'
           }}
-        />
+        >
+          <div className="w-full h-full bg-red-500 rounded-full flex items-center justify-center animate-pulse">
+            <svg
+              className="w-8 h-8 text-white transform -rotate-45"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
       )}
 
       <div className="max-w-none px-6 lg:px-12">
@@ -231,9 +380,13 @@ const Projects = () => {
             }}
           >
             {projects.map((project, index) => (
-              <div 
+              <div
                 key={index}
-                className="flex-shrink-0 w-[480px] h-[700px] relative group cursor-pointer overflow-hidden rounded-xl shadow-xl"
+                onClick={() => {
+                  navigate(`/projects/${project.slug}`);
+                  window.scrollTo(0, 0);
+                }}
+                className="flex-shrink-0 w-[360px] h-[520px] relative group cursor-pointer overflow-hidden rounded-xl shadow-xl"
               >
                 {/* Project Image */}
                 <div className="w-full h-full relative">
@@ -247,13 +400,13 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300"></div>
                   
                   {/* Content Overlay */}
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                    <h3 className="text-2xl font-bold mb-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                    <h3 className="text-xl font-bold mb-3 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                       {project.title}
                     </h3>
                     
                     {/* Services Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                    <div className="flex flex-wrap gap-2 mb-3 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-100">
                       {project.services.map((service, serviceIndex) => (
                         <span 
                           key={serviceIndex}
