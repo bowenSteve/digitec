@@ -1,83 +1,122 @@
 // projectsData.js - Central data file for all project pages
 
 export const projectsData = {
-  'lidar-point-cloud-processing': {
+  'lidar': {
     hero: {
-      category: "LIDAR PROJECT",
-      title: "LiDAR Point Cloud",
-      subtitle: "Processing",
+      category: "LIDAR ANNOTATION PROJECT",
+      title: "LiDAR",
+      subtitle: "",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
-      technologies: "Python, PCL, CloudCompare, PDAL",
-      keyFeatures: "3D point cloud processing, Autonomous vehicle mapping, Real-time processing",
-      description: "Advanced 3D point cloud processing system designed for autonomous vehicles and high-precision mapping applications. This project demonstrates cutting-edge LiDAR technology implementation with real-time processing capabilities and seamless integration with autonomous navigation systems."
+      technologies: "Python, PCL, CloudCompare, PDAL, OpenCV, TensorFlow",
+      keyFeatures: "3D/2D/Video annotation, Terrain mapping, Keypoint detection, Multi-modal data fusion",
+      description: "Advanced multi-modal LiDAR annotation platform combining 3D point cloud processing, 2D image annotation, video annotation, 3D terrain mapping, and keypoint detection. Designed for autonomous vehicles, robotics, and high-precision mapping applications with comprehensive annotation capabilities for training machine learning models."
     },
     industries: [
-      { name: "Automotive", icon: "Car" },
+      { name: "Autonomous Vehicles", icon: "Car" },
       { name: "Mapping & Surveying", icon: "Map" },
       { name: "Construction", icon: "HardHat" },
-      { name: "Robotics", icon: "Bot" }
+      { name: "Robotics", icon: "Bot" },
+      { name: "Infrastructure", icon: "Building2" }
     ],
     features: [
       {
+        icon: "Box",
+        title: "3D Bounding Boxes (Cuboids)",
+        description: "Precise 3D cuboid annotation for vehicles, pedestrians, and obstacles. Draw boxes around objects to define position, size, and orientation with sub-centimeter accuracy for autonomous vehicle training datasets."
+      },
+      {
+        icon: "Video",
+        title: "Video Annotation",
+        description: "Frame-by-frame video annotation with object tracking across sequences. Link annotations across consecutive frames to track movement and behavior of dynamic objects over time."
+      },
+      {
         icon: "Layers",
-        title: "3D Point Cloud Analysis",
-        description: "Advanced algorithms for processing millions of 3D points per second, enabling accurate object detection and terrain mapping with sub-centimeter precision."
+        title: "2D Image Annotation",
+        description: "Comprehensive 2D annotation tools for camera images synchronized with LiDAR data. Support for bounding boxes, polygons, and semantic segmentation to create multi-modal training datasets."
+      },
+      {
+        icon: "MapPin",
+        title: "3D Keypoint Annotation",
+        description: "Mark specific reference points on objects such as wheel centers, door handles, and traffic sign corners to improve accuracy of motion prediction and object recognition models."
+      },
+      {
+        icon: "Mountain",
+        title: "3D Terrain Mapping",
+        description: "High-precision aerial and ground-based terrain mapping with centimeter-level accuracy. Generate detailed topographical models for construction planning and environmental analysis covering 500+ hectares."
+      },
+      {
+        icon: "Target",
+        title: "Semantic Segmentation",
+        description: "Label each point in the cloud with specific classes such as 'road,' 'sidewalk,' 'building,' or 'vegetation' for detailed point-level scene understanding and environmental perception."
+      },
+      {
+        icon: "Users",
+        title: "Instance Segmentation",
+        description: "Advanced segmentation that differentiates between individual instances of the same class (e.g., 'pedestrian A' and 'pedestrian B') for multi-object tracking applications."
+      },
+      {
+        icon: "Route",
+        title: "Polyline Annotation",
+        description: "Trace linear features like lane boundaries, road markings, and power lines to aid navigation and path planning systems with precise geometric information."
       },
       {
         icon: "Zap",
         title: "Real-time Processing",
-        description: "Optimized pipeline for processing LiDAR data in real-time, crucial for autonomous navigation and dynamic environment mapping."
+        description: "Optimized pipeline processing 5M+ points per second with GPU acceleration for efficient annotation workflows and instant feedback during labeling tasks."
       },
       {
-        icon: "Target",
-        title: "Object Classification",
-        description: "Machine learning-powered classification system that identifies and categorizes objects from point cloud data including vehicles, pedestrians, and infrastructure."
+        icon: "GitBranch",
+        title: "Object Tracking",
+        description: "Advanced multi-object tracking across LiDAR frames and video sequences. Maintains consistent IDs for moving objects through occlusions, enabling behavior analysis and trajectory prediction for autonomous navigation systems."
       },
       {
-        icon: "Map",
-        title: "High-Precision Mapping",
-        description: "Generate detailed 3D maps with centimeter-level accuracy for navigation, construction planning, and environmental monitoring."
+        icon: "Scan",
+        title: "Sensor Fusion & Calibration",
+        description: "Precise calibration and fusion of multiple sensor modalities including LiDAR, cameras, radar, and IMU. Ensures accurate spatial alignment and temporal synchronization for comprehensive scene understanding and robust perception."
       }
     ],
     process: {
       title: "Development Process",
-      description: "A systematic approach to building robust LiDAR processing solutions from data acquisition to deployment.",
+      description: "Comprehensive approach to building a multi-modal LiDAR annotation platform from data acquisition to AI model deployment.",
       steps: [
         {
           number: "01",
           icon: "Target",
           title: "Requirements Analysis",
-          description: "Defined technical requirements including processing speed, accuracy thresholds, and integration needs with existing autonomous systems."
+          description: "Identified annotation requirements across 3D point clouds, 2D images, video sequences, terrain mapping needs, and keypoint detection specifications for autonomous vehicle and robotics applications."
         },
         {
           number: "02",
           icon: "Database",
-          title: "Data Collection & Preparation",
-          description: "Gathered diverse LiDAR datasets covering various environments and conditions for comprehensive testing and validation."
+          title: "Data Collection & Synchronization",
+          description: "Gathered multi-modal datasets including LiDAR scans, camera images, and video sequences. Implemented precise temporal and spatial synchronization between sensors for accurate fusion."
         },
         {
           number: "03",
           icon: "Code",
-          title: "Algorithm Development",
-          description: "Developed custom point cloud processing algorithms optimized for performance and accuracy using PCL and PDAL libraries."
+          title: "Annotation Tools Development",
+          description: "Built custom annotation interfaces supporting 3D cuboids, 2D bounding boxes, video tracking, keypoint marking, terrain modeling, semantic/instance segmentation, and polyline tracing with real-time visualization."
         },
         {
           number: "04",
-          icon: "TestTube",
-          title: "Testing & Validation",
-          description: "Rigorous testing across multiple scenarios including urban environments, highways, and challenging weather conditions."
+          icon: "Layers",
+          title: "Multi-Modal Annotation",
+          description: "Executed comprehensive annotation campaigns covering 3D objects, 2D image labels, video sequences, terrain models, and keypoints. Implemented quality assurance workflows with inter-annotator agreement validation."
         },
         {
           number: "05",
+          icon: "TestTube",
+          title: "Validation & Quality Control",
+          description: "Rigorous validation of annotations across all modalities with automated consistency checks, outlier detection, and manual review processes to ensure high-quality training data."
+        },
+        {
+          number: "06",
           icon: "Rocket",
-          title: "Deployment & Integration",
-          description: "Seamlessly integrated the solution with autonomous vehicle systems and mapping platforms with comprehensive documentation."
+          title: "Model Training & Deployment",
+          description: "Utilized annotated datasets to train machine learning models for object detection, semantic segmentation, and motion prediction. Deployed models for real-time inference in autonomous systems."
         }
       ]
     },
@@ -85,11 +124,164 @@ export const projectsData = {
       title: "Project Outcomes",
       results: [
         { label: "Processing Speed", value: "5M+ points/sec" },
-        { label: "Accuracy", value: "< 2cm error" }
+        { label: "3D Annotation Accuracy", value: "< 2cm error" },
+        { label: "Terrain Mapping Precision", value: "< 5cm" },
+        { label: "Objects Annotated", value: "100,000+" },
+        { label: "Video Frames Labeled", value: "50,000+" },
+        { label: "Area Mapped", value: "500+ hectares" }
       ],
       testimonial: {
-        quote: "The LiDAR processing system exceeded our expectations in both accuracy and performance. It's now a critical component of our autonomous navigation stack.",
-        author: "Technical Lead, Autonomous Vehicles Division"
+        quote: "This comprehensive LiDAR annotation platform has revolutionized our autonomous vehicle development. The multi-modal approach combining 3D, 2D, video, terrain, and keypoint annotations provides the rich training data our ML models need. The accuracy and efficiency gains have been extraordinary.",
+        author: "Director of AI/ML, Autonomous Vehicles Division"
+      }
+    }
+  },
+
+  'gen-ai': {
+    hero: {
+      category: "AI & AUTOMATION",
+      title: "Gen AI",
+      subtitle: "",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: "GPT-4, Gemini, LangChain, Python, TensorFlow, OpenAI API, NLP",
+      keyFeatures: "Lead generation, Conversational AI, Predictive analytics, Automated outreach",
+      description: "Advanced Generative AI platform for intelligent lead generation, personalized customer engagement, and automated sales optimization. Leverages cutting-edge AI models to identify, qualify, and nurture prospects through intelligent automation, conversational interfaces, and predictive analytics that drive revenue growth."
+    },
+    industries: [
+      { name: "Sales & Marketing", icon: "TrendingUp" },
+      { name: "E-commerce", icon: "ShoppingCart" },
+      { name: "B2B Services", icon: "Briefcase" },
+      { name: "Technology", icon: "Cpu" },
+      { name: "Real Estate", icon: "Building2" }
+    ],
+    features: [
+      {
+        icon: "Mail",
+        title: "Personalized Email Campaigns",
+        description: "AI-generated personalized email outreach messages tailored to each prospect's industry, pain points, and behavior patterns. Automatically creates compelling subject lines, body content, and follow-up sequences with high conversion rates."
+      },
+      {
+        icon: "Target",
+        title: "Prospect Research & Identification",
+        description: "Intelligent analysis of customer data to identify ideal customer profiles (ICP) and discover lookalike audiences. AI-powered lead scoring prioritizes prospects based on conversion likelihood, engagement history, and behavioral signals."
+      },
+      {
+        icon: "MessageSquare",
+        title: "24/7 Conversational AI Chatbots",
+        description: "Smart chatbots that engage website visitors, qualify leads round-the-clock, answer product questions, schedule demos automatically, and seamlessly hand off qualified prospects to sales teams with complete conversation context."
+      },
+      {
+        icon: "Bot",
+        title: "AI Sales Assistants",
+        description: "Virtual assistants that handle initial discovery calls, provide instant product information, schedule meetings with sales reps, and maintain consistent follow-up with prospects through multiple channels including email, SMS, and chat."
+      },
+      {
+        icon: "Brain",
+        title: "Predictive Lead Scoring",
+        description: "Machine learning models that analyze hundreds of data points to predict which leads are most likely to convert. Provides real-time scoring updates based on engagement patterns, demographic data, and behavioral triggers."
+      },
+      {
+        icon: "BarChart3",
+        title: "Campaign Performance Analytics",
+        description: "Deep analysis of campaign effectiveness with AI-powered recommendations for optimization. Identifies winning messaging patterns, optimal send times, best-performing channels, and suggests A/B testing strategies."
+      },
+      {
+        icon: "Users",
+        title: "Lookalike Audience Generation",
+        description: "Advanced algorithms that analyze your best customers to find similar prospects in external databases. Expands your addressable market by identifying companies and individuals matching your ideal customer profile."
+      },
+      {
+        icon: "Sparkles",
+        title: "Content Generation & Personalization",
+        description: "Automatically creates customized landing pages, ad copy, social media posts, and sales collateral tailored to specific audience segments. Generates thousands of personalized variations while maintaining brand voice."
+      },
+      {
+        icon: "TrendingUp",
+        title: "Conversion Pattern Recognition",
+        description: "AI identifies patterns in successful conversions across your entire funnel. Recognizes which touchpoints, messages, and timing combinations lead to closed deals, then replicates winning strategies automatically."
+      },
+      {
+        icon: "Clock",
+        title: "Automated Lead Nurturing",
+        description: "Intelligent drip campaigns that adapt to prospect behavior in real-time. Automatically adjusts messaging, timing, and channel selection based on engagement signals to move leads through the pipeline efficiently."
+      },
+      {
+        icon: "Database",
+        title: "Data Enrichment & Validation",
+        description: "Automatically enriches lead records with firmographic data, social profiles, technology stack information, and contact details. Validates and cleanses data to ensure high-quality prospect information for outreach."
+      },
+      {
+        icon: "Workflow",
+        title: "Multi-Channel Orchestration",
+        description: "Coordinates personalized outreach across email, LinkedIn, phone, SMS, and retargeting ads. AI determines the optimal channel mix and sequence for each prospect based on their preferences and response patterns."
+      }
+    ],
+    process: {
+      title: "Development Process",
+      description: "Comprehensive approach to building an intelligent AI-powered lead generation system from strategy to deployment and optimization.",
+      steps: [
+        {
+          number: "01",
+          icon: "Target",
+          title: "Strategy & ICP Definition",
+          description: "Collaborated with sales and marketing teams to define ideal customer profiles, key pain points, and conversion goals. Analyzed historical data to identify patterns in successful deals and customer acquisition costs."
+        },
+        {
+          number: "02",
+          icon: "Database",
+          title: "Data Integration & Preparation",
+          description: "Integrated multiple data sources including CRM, marketing automation, web analytics, and third-party databases. Built comprehensive data pipelines for real-time prospect scoring and enrichment with quality validation."
+        },
+        {
+          number: "03",
+          icon: "Brain",
+          title: "AI Model Development & Training",
+          description: "Developed custom machine learning models for lead scoring, content generation, and conversation intelligence. Trained models on historical conversion data and continuously refined using reinforcement learning from ongoing campaigns."
+        },
+        {
+          number: "04",
+          icon: "MessageSquare",
+          title: "Conversational AI Implementation",
+          description: "Built intelligent chatbots and voice assistants with natural language understanding, context retention, and multi-turn conversation capabilities. Integrated with calendar systems, CRM, and communication platforms for seamless handoffs."
+        },
+        {
+          number: "05",
+          icon: "Mail",
+          title: "Personalization Engine Development",
+          description: "Created dynamic content generation system that produces personalized emails, landing pages, and ad copy at scale. Implemented A/B testing framework to continuously improve messaging effectiveness across segments."
+        },
+        {
+          number: "06",
+          icon: "BarChart",
+          title: "Analytics & Optimization Dashboard",
+          description: "Built comprehensive analytics platform tracking campaign performance, lead quality metrics, conversion rates, and ROI. Implemented AI-powered recommendations for continuous optimization of targeting and messaging."
+        },
+        {
+          number: "07",
+          icon: "Rocket",
+          title: "Deployment & Continuous Learning",
+          description: "Deployed system with gradual rollout strategy, A/B testing against existing processes. Implemented feedback loops for continuous model improvement and regular retraining based on new conversion data and market changes."
+        }
+      ]
+    },
+    outcomes: {
+      title: "Project Outcomes",
+      results: [
+        { label: "Lead Quality Improvement", value: "73%" },
+        { label: "Conversion Rate Increase", value: "2.8x" },
+        { label: "Sales Cycle Reduction", value: "40%" },
+        { label: "Cost Per Lead Decrease", value: "58%" },
+        { label: "Email Open Rate", value: "68%" },
+        { label: "Lead Response Time", value: "< 2 mins" },
+        { label: "Qualified Leads/Month", value: "5,000+" },
+        { label: "Automation Coverage", value: "85%" }
+      ],
+      testimonial: {
+        quote: "This Gen AI lead generation platform has completely transformed our sales pipeline. The quality of leads has improved dramatically, and our sales team now focuses on closing deals rather than prospecting. The personalized outreach at scale was previously impossible with our team size. ROI has been exceptional.",
+        author: "VP of Sales & Marketing, B2B SaaS Company"
       }
     }
   },
@@ -101,10 +293,7 @@ export const projectsData = {
       subtitle: "Application",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "React, Node.js, PostgreSQL, Docker",
       keyFeatures: "Real-time analytics, Microservices architecture, Scalable infrastructure",
@@ -199,10 +388,7 @@ export const projectsData = {
       subtitle: "Suite",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "Selenium, Appium, Jest, Cypress",
       keyFeatures: "Cross-platform testing, Automated regression, CI/CD integration",
@@ -297,10 +483,7 @@ export const projectsData = {
       subtitle: "Analytics Platform",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1543286386-2e659306cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1554224154-26032ffc0d07?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "Python, Pandas, TensorFlow, Tableau",
       keyFeatures: "Predictive analytics, Risk assessment, Real-time dashboards",
@@ -388,52 +571,6 @@ export const projectsData = {
     }
   },
 
-  '3d-terrain-mapping-system': {
-    hero: {
-      category: "LIDAR PROJECT",
-      title: "3D Terrain Mapping",
-      subtitle: "System",
-      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1569163139394-de4798aa62b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1509228468518-180dd4864904?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-      ],
-      technologies: "LiDAR, GIS, Python, QGIS",
-      keyFeatures: "Aerial mapping, High precision, Construction planning",
-      description: "High-precision terrain mapping using aerial LiDAR data for construction planning and environmental analysis. This system provides accurate topographical data for large-scale infrastructure projects."
-    },
-    industries: [
-      { name: "Construction", icon: "HardHat" },
-      { name: "Infrastructure", icon: "Building2" },
-      { name: "Environmental", icon: "Leaf" }
-    ],
-    features: [
-      { icon: "Map", title: "Aerial Mapping", description: "Capture detailed terrain data from aerial LiDAR sensors covering large areas efficiently." },
-      { icon: "Ruler", title: "High Precision", description: "Achieve centimeter-level accuracy for construction and planning applications." }
-    ],
-    process: {
-      title: "Development Process",
-      description: "Systematic approach to terrain mapping and analysis.",
-      steps: [
-        { number: "01", icon: "Target", title: "Data Acquisition", description: "Aerial LiDAR scanning of target area." },
-        { number: "02", icon: "Code", title: "Processing", description: "Point cloud processing and terrain model generation." }
-      ]
-    },
-    outcomes: {
-      title: "Project Outcomes",
-      results: [
-        { label: "Accuracy", value: "< 5cm" },
-        { label: "Area Covered", value: "500+ hectares" }
-      ],
-      testimonial: {
-        quote: "Exceptional precision and detail for our construction planning needs.",
-        author: "Project Manager, Construction Firm"
-      }
-    }
-  },
-
   'ecommerce-platform-development': {
     hero: {
       category: "SOFTWARE DEVELOPMENT",
@@ -441,9 +578,7 @@ export const projectsData = {
       subtitle: "Development",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "React, Next.js, Stripe, MongoDB",
       keyFeatures: "Payment integration, Product management, Order tracking",
@@ -483,8 +618,7 @@ export const projectsData = {
       subtitle: "Automation",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "Postman, Newman, Jest, REST Assured",
       keyFeatures: "Automated validation, Performance testing, CI/CD integration",
@@ -521,8 +655,7 @@ export const projectsData = {
       subtitle: "Analytics",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "R, Python, Power BI, SQL",
       keyFeatures: "Patient outcome prediction, Hospital efficiency analysis",
@@ -559,8 +692,7 @@ export const projectsData = {
       subtitle: "Development",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
       technologies: "Vue.js, Laravel, MySQL, AWS",
       keyFeatures: "Custom workflows, Business automation, Cloud hosting",

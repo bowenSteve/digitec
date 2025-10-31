@@ -15,8 +15,34 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "LiDAR Point Cloud Processing",
-      slug: "lidar-point-cloud-processing",
+      title: "Gen AI",
+      slug: "gen-ai",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      images: [
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1655720828018-edd2daec9349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "https://images.unsplash.com/photo-1676277791608-ac54525aa94b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+      ],
+      technologies: [
+        { name: "GPT-4", icon: "🤖" },
+        { name: "Gemini", icon: "✨" },
+        { name: "LangChain", icon: "🔗" },
+        { name: "Python", icon: "🐍" },
+        { name: "TensorFlow", icon: "🧠" }
+      ],
+      services: ["Lead Generation", "AI Chatbots", "Predictive Analytics"],
+      description: "Advanced AI platform for intelligent lead generation, personalized customer engagement, and automated sales optimization",
+      fullDescription: "Advanced Generative AI platform for intelligent lead generation, personalized customer engagement, and automated sales optimization. Leverages cutting-edge AI models to identify, qualify, and nurture prospects.",
+      status: "Completed",
+      duration: "8 months",
+      githubUrl: "#",
+      demoUrl: "#",
+      liveUrl: "#"
+    },
+    {
+      id: 2,
+      title: "LiDAR",
+      slug: "lidar",
       image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
@@ -120,25 +146,6 @@ const Projects = () => {
       description: "Advanced financial data processing and predictive analytics for investment decisions",
       status: "Completed",
       duration: "5 months",
-      githubUrl: "#",
-      demoUrl: "#"
-    },
-    {
-      id: 5,
-      title: "3D Terrain Mapping System",
-      slug: "3d-terrain-mapping-system",
-      image: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      images: ["https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"],
-      technologies: [
-        { name: "LiDAR", icon: "🗺️" },
-        { name: "GIS", icon: "🌍" },
-        { name: "Python", icon: "🐍" },
-        { name: "QGIS", icon: "📍" }
-      ],
-      services: ["LiDAR", "Mapping", "Construction"],
-      description: "High-precision terrain mapping using aerial LiDAR data for construction planning",
-      status: "In Progress",
-      duration: "7 months",
       githubUrl: "#",
       demoUrl: "#"
     },
