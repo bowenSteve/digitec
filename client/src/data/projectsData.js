@@ -155,15 +155,15 @@ export const projectsData = {
   'gen-ai': {
     hero: {
       category: "AI & AUTOMATION",
-      title: "Gen AI",
+      title: "Data Enrichment",
       subtitle: "",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       images: [
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
       ],
-      technologies: "GPT-4, Gemini, LangChain, Python, TensorFlow, OpenAI API, NLP",
+      technologies: "HubSpot, Salesforce, CRM, zoominfo, clay.com, Apollo,maps",
       keyFeatures: "Lead generation, Conversational AI, Predictive analytics, Automated outreach",
-      description: "Advanced Generative AI platform for intelligent lead generation, personalized customer engagement, and automated sales optimization. Leverages cutting-edge AI models to identify, qualify, and nurture prospects through intelligent automation, conversational interfaces, and predictive analytics that drive revenue growth."
+      description: "Advanced Generative AI platform for intelligent lead generation, personalized customer engagement, and automated sales optimization. Leverages cutting-edge AI models to identify, qualify, and nurture prospects through intelligent automation, conversational interfaces and predictive analytics that drive revenue growth."
     },
     industries: [
       { name: "Sales & Marketing", icon: "TrendingUp" },
