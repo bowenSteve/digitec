@@ -15,6 +15,51 @@ function Projects() {
 
   const projects = [
     {
+      id: 2,
+      title: "LiDAR",
+      slug: "lidar",
+      category: "lidar",
+      image: "/images/lidar-annotation-interface.png",
+      thumbnail: "/images/lidar-annotation-interface.png",
+      images: [
+        "/images/lidar-annotation-interface.png"
+      ],
+      technologies: [
+        { name: "Segments.ai", icon: "🔷" },
+        { name: "CVAT", icon: "📊" },
+        { name: "CloudCompare", icon: "☁️" },
+        { name: "LAStools", icon: "🛠️" },
+        { name: "FME", icon: "🗺️" },
+        { name: "Python", icon: "🐍" },
+        { name: "PCL", icon: "📦" }
+      ],
+      description: "Advanced multi-modal LiDAR annotation platform with 3D point cloud processing, multi-sensor fusion, and automated labeling",
+      shortDescription: "Multi-sensor fusion for 3D point cloud annotation and autonomous vehicle training",
+      fullDescription: "Advanced multi-modal LiDAR annotation platform leveraging industry-leading tools like Segments.ai, CVAT, and CloudCompare for 3D point cloud processing, multi-sensor data fusion, and automated labeling. Combines 2D-3D projection, semantic segmentation, and model-assisted annotation for autonomous vehicles, robotics, and high-precision mapping applications.",
+      status: "Completed",
+      duration: "6 months",
+      completionDate: "March 2024",
+      featured: true,
+      githubUrl: "#",
+      demoUrl: "#",
+      liveUrl: "#",
+      features: [
+        "Multi-sensor fusion with real-time 2D-3D projection",
+        "3D cuboid annotation and semantic segmentation",
+        "Zero-shot and model-assisted labeling for 80+ classes",
+        "Object tracking across LiDAR frames",
+        "Support for point clouds up to 500M points",
+        "Data curation and multiple format support (KITTI)"
+      ],
+      testimonial: {
+        quote: "This comprehensive LiDAR annotation platform has revolutionized our autonomous vehicle development. The multi-modal approach combining 3D, 2D, and sensor fusion provides the rich training data our ML models need.",
+        author: "Dr. Sarah Mitchell",
+        role: "Director of AI/ML",
+        company: "Autonomous Vehicles Division",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      }
+    },
+    {
       id: 1,
       title: "Gen AI",
       slug: "gen-ai",
@@ -60,49 +105,7 @@ function Projects() {
       }
     },
     {
-      id: 2,
-      title: "LiDAR",
-      slug: "lidar",
-      category: "lidar",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      images: [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-      ],
-      technologies: [
-        { name: "Python", icon: "🐍" },
-        { name: "PCL", icon: "☁️" },
-        { name: "CloudCompare", icon: "📊" },
-        { name: "PDAL", icon: "🗺️" }
-      ],
-      description: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
-      shortDescription: "Advanced 3D point cloud processing for autonomous vehicles and mapping applications",
-      fullDescription: "Developed a comprehensive LiDAR point cloud processing pipeline that enables real-time 3D environmental mapping for autonomous vehicles. The system processes massive datasets efficiently, extracting meaningful features and terrain information crucial for navigation and obstacle detection.",
-      status: "Completed",
-      duration: "6 months",
-      completionDate: "March 2024",
-      featured: true,
-      githubUrl: "#",
-      demoUrl: "#",
-      liveUrl: "#",
-      features: [
-        "Real-time point cloud processing with sub-centimeter accuracy",
-        "Automatic object detection and classification",
-        "Terrain analysis and digital elevation model generation",
-        "Integration with existing mapping workflows"
-      ],
-      testimonial: {
-        quote: "The LiDAR processing solution transformed our autonomous vehicle development. The accuracy and speed exceeded our expectations.",
-        author: "Dr. Sarah Mitchell",
-        role: "Chief Technology Officer",
-        company: "AutoDrive Innovations",
-        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
-      }
-    },
-    {
-      id: 2,
+      id: 3,
       title: "Enterprise Web Application",
       slug: "enterprise-web-application",
       category: "software-development",
@@ -234,6 +237,7 @@ function Projects() {
   const categories = [
     { key: 'all', label: 'All Projects', count: projects.length },
     { key: 'lidar', label: 'LiDAR', count: projects.filter(p => p.category === 'lidar').length },
+    { key: 'ai-automation', label: 'AI & Automation', count: projects.filter(p => p.category === 'ai-automation').length },
     { key: 'software-development', label: 'Software Development', count: projects.filter(p => p.category === 'software-development').length },
     { key: 'software-testing', label: 'Software Testing', count: projects.filter(p => p.category === 'software-testing').length },
     { key: 'data-analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'data-analysis').length }

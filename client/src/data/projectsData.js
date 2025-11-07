@@ -6,13 +6,13 @@ export const projectsData = {
       category: "LIDAR ANNOTATION PROJECT",
       title: "LiDAR",
       subtitle: "",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "/images/lidar-annotation-interface.png",
       images: [
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+        "/images/lidar-annotation-interface.png"
       ],
-      technologies: "Python, PCL, CloudCompare, PDAL, OpenCV, TensorFlow",
-      keyFeatures: "3D/2D/Video annotation, Terrain mapping, Keypoint detection, Multi-modal data fusion",
-      description: "Advanced multi-modal LiDAR annotation platform combining 3D point cloud processing, 2D image annotation, video annotation, 3D terrain mapping, and keypoint detection. Designed for autonomous vehicles, robotics, and high-precision mapping applications with comprehensive annotation capabilities for training machine learning models."
+      technologies: "Segments.ai, CVAT, CloudCompare, LAStools, FME, Python, PCL",
+      keyFeatures: "Multi-sensor fusion, 3D cuboid annotation, Semantic segmentation, Model-assisted labeling, Real-time 2D-3D projection",
+      description: "Advanced multi-modal LiDAR annotation platform leveraging industry-leading tools like Segments.ai, CVAT, and CloudCompare for 3D point cloud processing, multi-sensor data fusion, and automated labeling. Combines 2D-3D projection, semantic segmentation, and model-assisted annotation for autonomous vehicles, robotics, and high-precision mapping applications with comprehensive capabilities for training machine learning models."
     },
     industries: [
       { name: "Autonomous Vehicles", icon: "Car" },
@@ -75,7 +75,22 @@ export const projectsData = {
       {
         icon: "Scan",
         title: "Sensor Fusion & Calibration",
-        description: "Precise calibration and fusion of multiple sensor modalities including LiDAR, cameras, radar, and IMU. Ensures accurate spatial alignment and temporal synchronization for comprehensive scene understanding and robust perception."
+        description: "Precise calibration and fusion of multiple sensor modalities including LiDAR, cameras, radar, and IMU using Segments.ai and Deepen. Ensures accurate spatial alignment and temporal synchronization for comprehensive scene understanding and robust perception."
+      },
+      {
+        icon: "Sparkles",
+        title: "Zero-Shot & Model-Assisted Labeling",
+        description: "Leverage pre-trained models and zero-shot capabilities for automated pre-labeling across 80+ standard classes. Upload custom models to accelerate annotation workflows with AI-powered predictions, significantly reducing manual labeling time."
+      },
+      {
+        icon: "Eye",
+        title: "2D-3D Projection & Overlay",
+        description: "Real-time synchronized visualization overlaying camera images with point clouds. Enables context-aware labeling with automatic projection of 3D annotations to 2D views and vice versa, ensuring consistency across all sensor modalities."
+      },
+      {
+        icon: "Database",
+        title: "Data Curation & Management",
+        description: "Advanced dataset curation tools for organizing, filtering, and grouping point cloud data before annotation. Supports multiple formats including KITTI, handles clouds up to 500M points, with intelligent data selection for optimal model training."
       }
     ],
     process: {
@@ -85,14 +100,14 @@ export const projectsData = {
         {
           number: "01",
           icon: "Target",
-          title: "Requirements Analysis",
-          description: "Identified annotation requirements across 3D point clouds, 2D images, video sequences, terrain mapping needs, and keypoint detection specifications for autonomous vehicle and robotics applications."
+          title: "Requirements Analysis & Tool Selection",
+          description: "Evaluated leading annotation platforms (Segments.ai, CVAT, Deepen) and processing tools (CloudCompare, LAStools, FME). Identified requirements for multi-sensor fusion, 3D cuboids, semantic segmentation, model-assisted labeling, and 2D-3D projection capabilities for autonomous vehicle and robotics applications."
         },
         {
           number: "02",
           icon: "Database",
-          title: "Data Collection & Synchronization",
-          description: "Gathered multi-modal datasets including LiDAR scans, camera images, and video sequences. Implemented precise temporal and spatial synchronization between sensors for accurate fusion."
+          title: "Data Collection & Processing",
+          description: "Gathered multi-modal datasets including LiDAR scans (up to 500M points), camera images, and video sequences. Processed point clouds using CloudCompare and LAStools, converted formats with FME, and implemented precise temporal and spatial synchronization for accurate sensor fusion."
         },
         {
           number: "03",
@@ -103,8 +118,8 @@ export const projectsData = {
         {
           number: "04",
           icon: "Layers",
-          title: "Multi-Modal Annotation",
-          description: "Executed comprehensive annotation campaigns covering 3D objects, 2D image labels, video sequences, terrain models, and keypoints. Implemented quality assurance workflows with inter-annotator agreement validation."
+          title: "Multi-Modal Annotation Workflow",
+          description: "Executed comprehensive annotation campaigns using Segments.ai for multi-sensor fusion labeling and CVAT for flexible annotation workflows. Leveraged zero-shot models and automated pre-labeling for 80+ classes, covering 3D cuboids, semantic segmentation, 2D image labels, and video sequences with quality assurance and inter-annotator validation."
         },
         {
           number: "05",
