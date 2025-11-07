@@ -61,7 +61,7 @@ function Projects() {
     },
     {
       id: 1,
-      title: "Gen AI",
+      title: "Data Enrichment",
       slug: "gen-ai",
       category: "ai-automation",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
