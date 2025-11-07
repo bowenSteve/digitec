@@ -10,7 +10,7 @@ export const projectsData = {
       images: [
         "/images/lidar-annotation-interface.png"
       ],
-      technologies: "Segments.ai, CVAT, CloudCompare, LAStools, FME, Python, PCL",
+      technologies: "Segments.ai, CVAT, CloudCompare, Dataloop, Labelbox, Deepen AI,Python, mindkosh,Super Annotate",
       keyFeatures: "Multi-sensor fusion, 3D cuboid annotation, Semantic segmentation, Model-assisted labeling, Real-time 2D-3D projection",
       description: "Advanced multi-modal LiDAR annotation platform leveraging industry-leading tools like Segments.ai, CVAT, and CloudCompare for 3D point cloud processing, multi-sensor data fusion, and automated labeling. Combines 2D-3D projection, semantic segmentation, and model-assisted annotation for autonomous vehicles, robotics, and high-precision mapping applications with comprehensive capabilities for training machine learning models."
     },
@@ -39,7 +39,7 @@ export const projectsData = {
       },
       {
         icon: "MapPin",
-        title: "3D Keypoint Annotation",
+        title: "3D and 2D Keypoint Annotation",
         description: "Mark specific reference points on objects such as wheel centers, door handles, and traffic sign corners to improve accuracy of motion prediction and object recognition models."
       },
       {
