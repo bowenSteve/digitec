@@ -53,7 +53,7 @@ const ProjectModal = ({ project, onClose }) => {
             <div className="relative h-96 bg-gray-100 rounded-xl overflow-hidden">
               <img
                 src={project.images[currentImageIndex]}
-                alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                alt={`${project.title} - ${currentImageIndex + 1}`}
                 className="w-full h-full object-cover"
               />
 
@@ -96,7 +96,7 @@ const ProjectModal = ({ project, onClose }) => {
                   >
                     <img
                       src={image}
-                      alt={`Thumbnail ${index + 1}`}
+                      alt={`${project.title} view ${index + 1}`}
                       className="w-full h-full object-cover"
                     />
                   </button>
