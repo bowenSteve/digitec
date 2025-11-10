@@ -176,7 +176,7 @@ export const projectsData = {
       {
         icon: "Mail",
         title: "Personalized Email Campaigns and Calls",
-        description: "AI-generated personalized email outreach messages tailored to each prospect's industry, pain points, and behavior patterns. Automatically creates compelling subject lines, body content, and follow-up sequences, including personal calls by the team, with high conversion rates."
+        description: "AI-generated personalized email outreach messages tailored to each prospect's industry, pain points, and behavior patterns. Automatically creates compelling subject lines, body content, and follow-up sequences, with personal calls from the team, with high conversion rates."
       },
       {
         icon: "Target",
