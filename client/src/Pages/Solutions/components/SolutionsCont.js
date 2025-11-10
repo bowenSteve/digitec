@@ -6,14 +6,6 @@ const SolutionsCont = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
-  // Helper function to convert title to URL slug
-  const slugify = (text) => {
-    return text
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[^\w-]+/g, '');
-  };
-
   const solutions = [
     {
       title: "Image & Video Annotation",

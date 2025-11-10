@@ -45,7 +45,7 @@ const ProjectHero = ({
             {/* Main Image */}
             <img
               src={projectImages[currentImageIndex]}
-              alt={`${title} - Image ${currentImageIndex + 1}`}
+              alt={`${title} view ${currentImageIndex + 1}`}
               className="w-full h-full xl:absolute xl:w-[90%] xl:h-[110%] z-40 object-cover xl:-mt-32 imgProjectCover rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300"
               style={{ marginTop: "0px" }}
               loading="eager"
