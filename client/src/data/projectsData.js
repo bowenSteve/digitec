@@ -175,8 +175,8 @@ export const projectsData = {
     features: [
       {
         icon: "Mail",
-        title: "Personalized Email Campaigns",
-        description: "AI-generated personalized email outreach messages tailored to each prospect's industry, pain points, and behavior patterns. Automatically creates compelling subject lines, body content, and follow-up sequences with high conversion rates."
+        title: "Personalized Email Campaigns and Calls",
+        description: "AI-generated personalized email outreach messages tailored to each prospect's industry, pain points, and behavior patterns. Automatically creates compelling subject lines, body content, and follow-up sequences, including personal calls, with high conversion rates."
       },
       {
         icon: "Target",
@@ -226,7 +226,7 @@ export const projectsData = {
       {
         icon: "Database",
         title: "Data Enrichment & Validation",
-        description: "Automatically enriches lead records with firmographic data, social profiles, technology stack information, and contact details. Validates and cleanses data to ensure high-quality prospect information for outreach."
+        description: "Our team personally enriches your lead records with valuable firmographic data, social profiles, technology stack information, and contact details. This hands-on approach is followed by an automated validation and cleansing process to ensure the highest quality prospect information for outreach."
       },
       {
         icon: "Workflow",
