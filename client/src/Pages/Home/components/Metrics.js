@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 
 const Metrics = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,7 +10,7 @@ const Metrics = () => {
   });
   const sectionRef = useRef(null);
 
-  const metrics = [
+  const metrics = useMemo(() => [
     {
       value: 500,
       suffix: 'M+',
@@ -35,7 +35,7 @@ const Metrics = () => {
       label: 'Enterprise Clients Served',
       key: 'clients'
     }
-  ];
+  ], []);
 
   // Intersection Observer for triggering animation
   useEffect(() => {
@@ -48,13 +48,14 @@ const Metrics = () => {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -73,7 +74,7 @@ const Metrics = () => {
         const timer = setInterval(() => {
           currentStep++;
           const currentValue = Math.min(increment * currentStep, metric.value);
-          
+
           setAnimatedNumbers(prev => ({
             ...prev,
             [metric.key]: Math.floor(currentValue)
@@ -85,7 +86,7 @@ const Metrics = () => {
         }, stepDuration);
       });
     }
-  }, [isVisible]);
+  }, [isVisible, metrics]);
 
   return (
     <section 

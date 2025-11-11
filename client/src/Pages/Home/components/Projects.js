@@ -8,7 +8,6 @@ const Projects = () => {
   const projectsAreaRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [maxScrollLeft, setMaxScrollLeft] = useState(0);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
 
@@ -240,13 +239,14 @@ const Projects = () => {
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -256,27 +256,25 @@ const Projects = () => {
     // Only hijack scroll when section is in view AND hovering over projects area
     if (isInView && isHoveringProjects && scrollContainerRef.current) {
       const currentScrollLeft = scrollContainerRef.current.scrollLeft;
-      
+
       // Check if we've reached the end of horizontal scroll
       const isAtEnd = currentScrollLeft >= maxScrollLeft;
       const isAtStart = currentScrollLeft <= 0;
-      
+
       // Allow normal scroll if at boundaries and scrolling in direction that would go further
       if ((isAtEnd && e.deltaY > 0) || (isAtStart && e.deltaY < 0)) {
         return; // Allow normal page scroll
       }
-      
+
       e.preventDefault();
-      
+
       // Convert vertical scroll to horizontal
       const scrollAmount = e.deltaY * 2;
-      
+
       scrollContainerRef.current.scrollBy({
         left: scrollAmount,
         behavior: 'smooth'
       });
-      
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
     }
   };
 
@@ -289,6 +287,7 @@ const Projects = () => {
     return () => {
       document.removeEventListener('wheel', handleWheel);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView, isHoveringProjects, maxScrollLeft]);
 
   return (
@@ -379,11 +378,6 @@ const Projects = () => {
             style={{
               scrollbarWidth: 'none',
               msOverflowStyle: 'none'
-            }}
-            onScroll={() => {
-              if (scrollContainerRef.current) {
-                setScrollPosition(scrollContainerRef.current.scrollLeft);
-              }
             }}
           >
             {projects.map((project, index) => (

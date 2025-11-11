@@ -1,19 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { ChevronDown, Search, User, Tag, ExternalLink } from 'lucide-react'
+import { Search, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
 import ProjectModal from "../../Components/ProjectModal"
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('title');
-  const [showFilters, setShowFilters] = useState(false);
+  const [searchTerm] = useState('');
+  const [sortBy] = useState('title');
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeTechFilter, setActiveTechFilter] = useState(null);
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: 2,
       title: "LiDAR",
@@ -232,31 +231,31 @@ function Projects() {
       githubUrl: "#",
       demoUrl: "#"
     }
-  ];
+  ], []);
 
-  const categories = [
+  const categories = useMemo(() => [
     { key: 'all', label: 'All Projects', count: projects.length },
     { key: 'lidar', label: 'LiDAR', count: projects.filter(p => p.category === 'lidar').length },
     { key: 'ai-automation', label: 'AI & Automation', count: projects.filter(p => p.category === 'ai-automation').length },
     { key: 'software-development', label: 'Software Development', count: projects.filter(p => p.category === 'software-development').length },
     { key: 'software-testing', label: 'Software Testing', count: projects.filter(p => p.category === 'software-testing').length },
     { key: 'data-analysis', label: 'Data Analysis', count: projects.filter(p => p.category === 'data-analysis').length }
-  ];
-
-  // Enhance projects with default values if missing
-  const enhancedProjects = projects.map(project => ({
-    ...project,
-    thumbnail: project.thumbnail || project.image,
-    images: project.images || [project.image],
-    technologies: project.technologies.map(tech =>
-      typeof tech === 'string' ? { name: tech, icon: null } : tech
-    ),
-    shortDescription: project.shortDescription || project.description,
-    fullDescription: project.fullDescription || project.description,
-    liveUrl: project.liveUrl || project.demoUrl
-  }));
+  ], [projects]);
 
   const filteredProjects = useMemo(() => {
+    // Enhance projects with default values if missing
+    const enhancedProjects = projects.map(project => ({
+      ...project,
+      thumbnail: project.thumbnail || project.image,
+      images: project.images || [project.image],
+      technologies: project.technologies.map(tech =>
+        typeof tech === 'string' ? { name: tech, icon: null } : tech
+      ),
+      shortDescription: project.shortDescription || project.description,
+      fullDescription: project.fullDescription || project.description,
+      liveUrl: project.liveUrl || project.demoUrl
+    }));
+
     let filtered = enhancedProjects;
 
     // Filter by category
@@ -301,11 +300,7 @@ function Projects() {
     });
 
     return filtered;
-  }, [activeFilter, searchTerm, sortBy, activeTechFilter]);
-
-  const getStatusColor = (status) => {
-    return status === 'Completed' ? 'bg-green-100 text-green-800 border-green-200' : 'bg-blue-100 text-blue-800 border-blue-200';
-  };
+  }, [activeFilter, searchTerm, sortBy, activeTechFilter, projects]);
 
   const ProjectCard = ({ project, index }) => {
     // First row (first 3 cards) should be visible immediately
