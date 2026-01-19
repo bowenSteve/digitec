@@ -10,21 +10,19 @@ import Reviews from "./components/Reviews"
 
 function Home (){
     return (
-        <div className="">
-            
+        <>
             <Navbar/>
-            <Hero/>
-            <Metrics/>
-            <Projects/>
-            <About/>
-            <Services/>
-            <WhyUs/>
-            <Reviews/>
-
+            <main>
+                <Hero/>
+                <Metrics/>
+                <Projects/>
+                <About/>
+                <Services/>
+                <WhyUs/>
+                <Reviews/>
+            </main>
             <Footer/>
-
-        </div>
-       
+        </>
     )
 }
 export default Home;

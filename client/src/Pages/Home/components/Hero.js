@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import OptimizedImage from '../../../Components/OptimizedImage';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -43,17 +44,27 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Images */}
+      {/* Background Images - Optimized for LCP */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ${
+          className={`absolute inset-0 transition-all duration-1000 ${
             index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
           }`}
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${slide.background}')`
-          }}
-        ></div>
+        >
+          <OptimizedImage
+            src={slide.background}
+            alt={slide.title.replace(/\n/g, ' ')}
+            width={1920}
+            height={1080}
+            priority={index === 0}
+            objectFit="cover"
+            className="w-full h-full"
+            style={{
+              filter: 'brightness(0.6)'
+            }}
+          />
+        </div>
       ))}
 
       {/* Navigation Arrows */}

@@ -106,7 +106,7 @@ export const servicesData = {
       category: "DIGITAL MARKETING",
       title: "Search Engine",
       subtitle: "Optimization",
-      image: "/images/qreative-seo-google-01-sm.avif",
+      image: "/images/seo-services-google-optimization.avif",
       technologies: "Google Analytics, SEMrush, Ahrefs, Search Console",
       keyFeatures: "Keyword research, On-page SEO, Link building",
       description: "Improving your search engine rankings helps attract qualified, long-lasting traffic. Our advanced Search Engine Optimization expertise ensures we refine your positioning with precision."

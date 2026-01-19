@@ -1,17 +1,59 @@
+import React, { lazy, Suspense } from 'react';
+
+// Eager load Home page for better initial load (LCP optimization)
 import Home from "../Pages/Home/Home"
-import About from "../Pages/About/About"
-import Contact from "../Pages/Contact/Contact"
-import Projects from "../Pages/Projects/Projects"
-import ProjectDetail from "../Pages/Projects/Sub-Projects/ProjectDetail"
-import Services from "../Pages/Services/Services"
-import ServiceDetail from "../Pages/Services/Sub-Services/ServiceDetail"
-import Solutions from "../Pages/Solutions/Solutions"
-import SolutionDetail from "../Pages/Solutions/Sub-Solutions/SolutionDetail"
-import Industries from "../Pages/Industries/Industries"
-import Resources from "../Pages/Resources/Resources"
-import TermsOfUse from "../Pages/Legal/TermsOfUse"
-import PrivacyPolicy from "../Pages/Legal/PrivacyPolicy"
-import CookiePolicy from "../Pages/Legal/CookiePolicy"
+
+// Lazy load all other routes for code splitting (FID optimization)
+const About = lazy(() => import("../Pages/About/About"));
+const Contact = lazy(() => import("../Pages/Contact/Contact"));
+const Projects = lazy(() => import("../Pages/Projects/Projects"));
+const ProjectDetail = lazy(() => import("../Pages/Projects/Sub-Projects/ProjectDetail"));
+const Services = lazy(() => import("../Pages/Services/Services"));
+const ServiceDetail = lazy(() => import("../Pages/Services/Sub-Services/ServiceDetail"));
+const Solutions = lazy(() => import("../Pages/Solutions/Solutions"));
+const SolutionDetail = lazy(() => import("../Pages/Solutions/Sub-Solutions/SolutionDetail"));
+const Industries = lazy(() => import("../Pages/Industries/Industries"));
+const Resources = lazy(() => import("../Pages/Resources/Resources"));
+const TermsOfUse = lazy(() => import("../Pages/Legal/TermsOfUse"));
+const PrivacyPolicy = lazy(() => import("../Pages/Legal/PrivacyPolicy"));
+const CookiePolicy = lazy(() => import("../Pages/Legal/CookiePolicy"));
+
+// Loading component for suspense fallback
+const PageLoader = () => (
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '100vh',
+    backgroundColor: '#f9fafb'
+  }}>
+    <div style={{ textAlign: 'center' }}>
+      <div style={{
+        width: '48px',
+        height: '48px',
+        border: '4px solid #e5e7eb',
+        borderTop: '4px solid #4ade80',
+        borderRadius: '50%',
+        animation: 'spin 1s linear infinite',
+        margin: '0 auto 16px'
+      }}></div>
+      <p style={{ color: '#6b7280', fontSize: '14px' }}>Loading...</p>
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
+    </div>
+  </div>
+);
+
+// Wrapper to add Suspense to lazy-loaded components
+const withSuspense = (Component) => (
+  <Suspense fallback={<PageLoader />}>
+    <Component />
+  </Suspense>
+);
 
 const routes = [
     {
@@ -20,55 +62,55 @@ const routes = [
     },
     {
         path: '/about',
-        element: <About />
+        element: withSuspense(About)
     },
     {
         path: '/contact',
-        element: <Contact />
+        element: withSuspense(Contact)
     },
     {
         path: '/projects',
-        element: <Projects />
+        element: withSuspense(Projects)
     },
     {
         path: '/projects/:slug',
-        element: <ProjectDetail />
+        element: withSuspense(ProjectDetail)
     },
     {
         path: '/services',
-        element: <Services />
+        element: withSuspense(Services)
     },
     {
         path: '/services/:slug',
-        element: <ServiceDetail />
+        element: withSuspense(ServiceDetail)
     },
     {
         path: '/solutions',
-        element: <Solutions />
+        element: withSuspense(Solutions)
     },
     {
         path: '/solutions/:slug',
-        element: <SolutionDetail />
+        element: withSuspense(SolutionDetail)
     },
     {
         path: '/industries',
-        element: <Industries />
+        element: withSuspense(Industries)
     },
     {
         path: '/resources',
-        element: <Resources />
+        element: withSuspense(Resources)
     },
     {
         path: '/terms-of-use',
-        element: <TermsOfUse />
+        element: withSuspense(TermsOfUse)
     },
     {
         path: '/privacy-policy',
-        element: <PrivacyPolicy />
+        element: withSuspense(PrivacyPolicy)
     },
     {
         path: '/cookie-policy',
-        element: <CookiePolicy />
+        element: withSuspense(CookiePolicy)
     }
 ]
 

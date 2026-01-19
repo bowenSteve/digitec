@@ -1,3 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Disallow admin or private routes if any
+# Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://www.infobridgeniatech.com/sitemap.xml

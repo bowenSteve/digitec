@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- About Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/about</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/contact</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Projects Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/projects</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Services Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/services</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Solutions Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/solutions</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Industries Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/industries</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Resources Page -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/resources</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/terms-of-use</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/privacy-policy</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/cookie-policy</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Service Detail Pages -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/services/website-creation</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/services/search-engine-optimization</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/services/branding-visual-design</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/services/web-development</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Solution Detail Pages -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/solutions/computer-vision</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/solutions/natural-language-processing</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/solutions/generative-ai</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/solutions/data-content-services</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Project Detail Pages -->
+  <url>
+    <loc>https://www.infobridgeniatech.com/projects/lidar</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.infobridgeniatech.com/projects/gen-ai</loc>
+    <lastmod>2025-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+</urlset>

@@ -2,32 +2,113 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/ibn.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/ibn.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>InfoBridge Niatech</title>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/infobridge-niatech-logo.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/infobridge-niatech-logo.png" />
+
+    <!-- Viewport and Theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="Transform your business with AI solutions, LiDAR processing, computer vision & data annotation. Expert automation & analytics services by InfoBridge NiaTech." />
+    <meta name="keywords" content="AI solutions, LiDAR processing, computer vision, NLP, data annotation, machine learning, software development, automation, data analytics, generative AI, InfoBridge NiaTech" />
+    <meta name="author" content="InfoBridge NiaTech" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Canonical URL - Update with actual domain -->
+    <link rel="canonical" href="https://www.infobridgeniatech.com" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.infobridgeniatech.com" />
+    <meta property="og:title" content="InfoBridge NiaTech | AI Solutions, LiDAR Processing & Data Annotation Services" />
+    <meta property="og:description" content="Transform your business with intelligent data solutions and cutting-edge AI technology. Specializing in LiDAR, computer vision, NLP, and automation." />
+    <meta property="og:image" content="%PUBLIC_URL%/infobridge-niatech-logo.png" />
+    <meta property="og:site_name" content="InfoBridge NiaTech" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.infobridgeniatech.com" />
+    <meta name="twitter:title" content="InfoBridge NiaTech | AI Solutions & Data Services" />
+    <meta name="twitter:description" content="Transform your business with intelligent data solutions and cutting-edge AI technology." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/infobridge-niatech-logo.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Structured Data - JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "InfoBridge NiaTech",
+      "alternateName": "IBN",
+      "url": "https://www.infobridgeniatech.com",
+      "logo": "%PUBLIC_URL%/infobridge-niatech-logo.png",
+      "description": "AI solutions, LiDAR processing, and data annotation services provider",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "207 Bellwood Dr",
+        "addressLocality": "Pittsburgh",
+        "addressRegion": "PA",
+        "postalCode": "15229",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "contact@infobridgeniatech.com"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/infobridge-niatech"
+      ],
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "LiDAR Processing",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Data Annotation",
+        "Machine Learning",
+        "Software Development"
+      ]
+    }
+    </script>
+
+    <!-- Page Title - Optimized for SEO -->
+    <title>InfoBridge NiaTech | AI Solutions, LiDAR Processing & Data Annotation Services</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#root" style="position: absolute; left: -9999px; top: 0; z-index: 999;">Skip to main content</a>
+
+    <noscript>
+      <div style="text-align: center; padding: 50px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;">
+        <h1 style="color: #1a1a1a; font-size: 2.5rem; margin-bottom: 1rem;">InfoBridge NiaTech</h1>
+        <h2 style="color: #4ade80; font-size: 1.5rem; margin-bottom: 2rem;">AI Solutions & Data Services</h2>
+        <p style="color: #666; font-size: 1.1rem; line-height: 1.6; max-width: 600px; margin: 0 auto 1rem;">
+          You need to enable JavaScript to run this interactive application.
+        </p>
+        <p style="color: #666; font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto;">
+          We provide cutting-edge AI solutions, LiDAR processing, computer vision, data annotation, and software development services.
+          Transform your business with intelligent automation and advanced analytics.
+        </p>
+        <div style="margin-top: 2rem;">
+          <strong>Services:</strong> LiDAR Processing • AI & Automation • Software Development • Data Analytics
+        </div>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.

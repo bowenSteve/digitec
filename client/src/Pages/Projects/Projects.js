@@ -4,6 +4,7 @@ import { Search, Tag, ExternalLink } from 'lucide-react'
 import Navbar from "../../Components/Navbar"
 import Footer from "../../Components/Footer"
 import ProjectModal from "../../Components/ProjectModal"
+import OptimizedImage from "../../Components/OptimizedImage"
 
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -347,10 +348,14 @@ function Projects() {
         onClick={() => window.scrollTo(0, 0)}
       >
         <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
-          <img
+          <OptimizedImage
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            width={800}
+            height={600}
+            priority={index < 3}
+            className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+            objectFit="cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
